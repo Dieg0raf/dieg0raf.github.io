@@ -1,10 +1,7 @@
-import { useState } from "react";
 import ProjectShowcase from "./ProjectShowCase";
 import Landing from "./Landing";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="dark">
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
