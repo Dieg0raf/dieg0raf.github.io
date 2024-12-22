@@ -4,28 +4,71 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 const ProjectShowcase = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "CaMooRa",
       description:
-        "A full-stack e-commerce platform with user authentication, product management, and payment processing. Features include shopping cart functionality, order tracking, and admin dashboard.",
-      image: "/api/placeholder/400/250",
-      demoLink: "https://demo.example.com",
-      githubLink: "https://github.com/example/project",
+        "Currently, developing CaMooRa, an app that helps UC Davis students easily find and connect with the best photographers for their needs. The platform is designed to be simple and user-friendly, removing unnecessary hurdles and making connections effortless.",
+      image: "/public/logo.svg",
+      demoLink: "https://camoora.io",
+      githubLink: "https://github.com/winzamark123/caMOOra",
       techStack: [
         {
-          name: "React",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-        },
-        {
           name: "Node.js",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-        },
-        {
-          name: "MongoDB",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
         },
         {
           name: "TypeScript",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+        },
+        {
+          name: "Tailwind CSS",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+        },
+        {
+          name: "PostgreSQL",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+        },
+        {
+          name: "AWS S3 & CloudFront",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
+        },
+      ],
+    },
+    {
+      title: "Rivas Pro Painting",
+      description:
+        "Rivas Pro Painting Inc. web application – a dynamic and user-friendly platform developed to streamline operations for a painting company.",
+      image: "/public/RivasSite.png",
+      demoLink: "",
+      githubLink: "https://github.com/dieg0raf/RivasProPainting",
+      techStack: [
+        {
+          name: "Python",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+        },
+        {
+          name: "Django",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
+        },
+        {
+          name: "Bootstrap",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-plain.svg",
+        },
+        {
+          name: "PostgreSQL",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+        },
+      ],
+    },
+    {
+      title: "L-Store Database",
+      description:
+        "L-Store is a lineage-based database designed and written from scratch. This was a group project created from material of UCDavis's Database class (ECS 165).",
+      image: "/public/MemoryBufferDisk.png",
+      githubLink: "https://github.com/Dieg0raf/LStore_Database",
+      techStack: [
+        {
+          name: "Python",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
         },
       ],
     },
@@ -33,7 +76,7 @@ const ProjectShowcase = () => {
   ];
 
   return (
-    <div className="py-16">
+    <section id="my-projects">
       <h2 className="text-3xl font-bold mb-8 text-center">My Projects</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
         {projects.map((project, index) => (
@@ -77,14 +120,17 @@ const ProjectShowcase = () => {
                 </div>
 
                 <div className="flex justify-end gap-4">
-                  <a
-                    href={project.demoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 flex items-center gap-1"
-                  >
-                    <ExternalLink size={16} /> Demo
-                  </a>
+                  {project.demoLink && (
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:text-blue-300 flex items-center gap-1"
+                    >
+                      <ExternalLink size={16} /> Demo
+                    </a>
+                  )}
+
                   <a
                     href={project.githubLink}
                     target="_blank"
@@ -99,7 +145,7 @@ const ProjectShowcase = () => {
           </Card>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
