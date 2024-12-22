@@ -9,7 +9,7 @@ const ExperienceSection = () => {
       location: "Lodi, CA",
       duration: "August 2024 - December 2024",
       description:
-        "Led development of microservices architecture serving millions of users. Improved system performance by 40% through optimization of database queries and caching strategies.",
+        "Focused on backend development by automating scripts to streamline processes and integrating various third-party services to enhance system functionality. Worked on creating efficient workflows and ensuring seamless communication between services to support overall project goals.",
       responsibilities: [
         "Developed AWS Lambda functions for the One Stop Wine Shop eCommerce site (840k+ yearly views, 330k+ users), automating data transfers to Algolia, Yotpo, and other third-party services.",
         "Built a shopping feed script for Facebook and Google Merchant, increasing visibility and driving sales for key wine-selling sites",

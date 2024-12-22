@@ -83,6 +83,10 @@ const SkillsSection = () => {
         name: "AWS",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
       },
+      {
+        name: "Docker",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+      },
       { name: "REST API", Component: Server },
       { name: "tRPC", Component: Code2 },
       {
