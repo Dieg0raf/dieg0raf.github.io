@@ -1,13 +1,83 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, Github, Linkedin } from "lucide-react";
+import emailjs from "@emailjs/browser";
+
+const MAX_MESSAGES = 5;
+const TIME_FRAME = 1000 * 60 * 60 * 24; // 24 hours
 
 const ContactSection = () => {
-  const handleSubmit = () => {
-    // e.preventDefault();
-    // Add email handling - Could use EmailJS, FormSpree
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const resetStates = () => {
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const serviceId: string = import.meta.env.VITE_SERVICE_ID;
+    const templateId: string = import.meta.env.VITE_TEMPLATE_ID;
+    const publicKey: string = import.meta.env.VITE_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error("EmailJS keys are missing");
+      return;
+    }
+
+    // Get the current count and timestamp from local storage
+    const messageCount = parseInt(
+      localStorage.getItem("messageCount") || "0",
+      10
+    );
+    const lastMessageTime = parseInt(
+      localStorage.getItem("lastMessageTime") || "0",
+      10
+    );
+    const currentTime = Date.now();
+
+    // Check if the user is allowed to send a message
+    if (
+      messageCount >= MAX_MESSAGES &&
+      currentTime - lastMessageTime < TIME_FRAME
+    ) {
+      alert(
+        "You have reached the maximum number of messages allowed. Please try again later."
+      );
+      return;
+    }
+
+    // Object that contains the data to be sent to the email service
+    const templateParams = {
+      from_name: name,
+      reply_to: email,
+      from_email: email,
+      to_name: "Diego Rafael",
+      message,
+    };
+
+    // Send email using EmailJS
+    emailjs
+      .send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log("Email sent successfully", response.status, response.text);
+        alert("Message sent successfully!");
+        resetStates();
+
+        // Update the count and timestamp in local storage
+        localStorage.setItem("messageCount", (messageCount + 1).toString());
+        localStorage.setItem("lastMessageTime", currentTime.toString());
+      })
+      .catch((error: Error) => {
+        console.error("Error sending email", error);
+      });
   };
 
   return (
@@ -66,6 +136,8 @@ const ContactSection = () => {
                     type="text"
                     placeholder="Name"
                     required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400"
                   />
                 </div>
@@ -73,17 +145,10 @@ const ContactSection = () => {
                 <div>
                   <Input
                     type="email"
-                    placeholder="Email"
+                    placeholder="Your Email"
                     required
-                    className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400"
-                  />
-                </div>
-
-                <div>
-                  <Input
-                    type="text"
-                    placeholder="Subject"
-                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400"
                   />
                 </div>
@@ -92,6 +157,8 @@ const ContactSection = () => {
                   <Textarea
                     placeholder="Message"
                     required
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400 min-h-[150px]"
                   />
                 </div>
