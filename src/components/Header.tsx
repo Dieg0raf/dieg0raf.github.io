@@ -83,16 +83,40 @@ const Header = () => {
         {isMenuOpen && (
           <div className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <button className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Home
+              <button
+                onClick={() => {
+                  scrollToSection("my-experience");
+                  toggleMenu();
+                }}
+                className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                Experience
               </button>
-              <button className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                About
-              </button>
-              <button className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              <button
+                onClick={() => {
+                  scrollToSection("my-projects");
+                  toggleMenu();
+                }}
+                className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
                 Projects
               </button>
-              <button className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              <button
+                onClick={() => {
+                  scrollToSection("my-skills");
+                  toggleMenu();
+                }}
+                className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                Skills
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection("my-contact");
+                  toggleMenu();
+                }}
+                className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
                 Contact
               </button>
             </div>

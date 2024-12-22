@@ -10,6 +10,7 @@ const ProjectShowcase = () => {
       image: "/logo.svg",
       demoLink: "https://camoora.io",
       githubLink: "https://github.com/winzamark123/caMOOra",
+      demoWord: "Live Site",
       techStack: [
         {
           name: "Node.js",
@@ -155,7 +156,7 @@ const ProjectShowcase = () => {
                       rel="noopener noreferrer"
                       className="text-blue-400 hover:text-blue-300 flex items-center gap-1"
                     >
-                      <ExternalLink size={16} /> Demo
+                      <ExternalLink size={16} /> {project.demoWord || "Demo"}
                     </a>
                   )}
 
