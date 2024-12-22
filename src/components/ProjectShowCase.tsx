@@ -39,6 +39,24 @@ const ProjectShowcase = () => {
       ],
     },
     {
+      title: "TCP Congestion Control Implementation",
+      description:
+        "Developed a Python-based implementation of TCP congestion control algorithms, leveraging Docker to introduce latency. The project simulates the behavior of algorithms such as TCP Reno, TCP Tahoe, Stop-and-Wait, and Fixed Sliding Window.",
+      image: "/tcpImg.png",
+      githubLink:
+        "https://github.com/Dieg0raf/TCP-Congestion-Control-Implementation",
+      techStack: [
+        {
+          name: "Python",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+        },
+        {
+          name: "Docker",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+        },
+      ],
+    },
+    {
       title: "Rivas Pro Painting",
       description:
         "Rivas Pro Painting Inc. web application – a dynamic and user-friendly platform developed to streamline operations for a painting company.",
@@ -100,6 +118,7 @@ const ProjectShowcase = () => {
       image: "/logismImg.png",
       githubLink: "https://github.com/Dieg0raf/Cache-Implementation",
     },
+
     // ... other projects
   ];
 
