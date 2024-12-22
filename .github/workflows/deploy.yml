@@ -20,6 +20,12 @@ jobs:
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
 
+      - name: Echo environment variables
+        run: |
+          echo "Service ID: ${{ secrets.SERVICE_ID }}"
+          echo "Template ID: ${{ secrets.TEMPLATE_ID }}"
+          echo "Public Key: ${{ secrets.PUBLIC_KEY }}"
+
       - name: Build project
         run: npm run build
 
@@ -35,6 +41,12 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
+    env:
+      NODE_ENV: production
+      VITE_SERVICE_ID: ${{ secrets.SERVICE_ID }}
+      VITE_TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
+      VITE_PUBLIC_KEY: ${{secrets.PUBLIC_KEY }}
+
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v3
@@ -44,6 +56,11 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
+        env:
+          NODE_ENV: production
+          VITE_SERVICE_ID: ${{ secrets.SERVICE_ID }}
+          VITE_TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
+          VITE_PUBLIC_KEY: ${{secrets.PUBLIC_KEY }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
