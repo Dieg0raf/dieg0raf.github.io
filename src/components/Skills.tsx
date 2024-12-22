@@ -35,7 +35,7 @@ const SkillsSection = () => {
     frameworks: [
       {
         name: "Django",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg",
+        icon: "/djangoLogoLight.svg",
       },
       {
         name: "React",

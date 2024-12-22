@@ -42,7 +42,6 @@ const ProjectShowcase = () => {
       description:
         "Rivas Pro Painting Inc. web application – a dynamic and user-friendly platform developed to streamline operations for a painting company.",
       image: "/RivasSite.png",
-      demoLink: "",
       githubLink: "https://github.com/dieg0raf/RivasProPainting",
       techStack: [
         {
@@ -51,7 +50,7 @@ const ProjectShowcase = () => {
         },
         {
           name: "Django",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
+          icon: "/djangoLogoLight.svg",
         },
         {
           name: "Bootstrap",
@@ -75,6 +74,30 @@ const ProjectShowcase = () => {
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
         },
       ],
+    },
+    {
+      title: "Calorie Tracker",
+      description:
+        "Calorie Tracker api is a Django REST API that allows users to track their daily calorie intake. Users can create an account, log in, and track their daily calorie intake.",
+      image: "/djangoImg.jpg",
+      githubLink: "https://github.com/Dieg0raf/Calorie-Tracker",
+      techStack: [
+        {
+          name: "Django",
+          icon: "/djangoLogoLight.svg",
+        },
+        {
+          name: "PostgreSQL",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+        },
+      ],
+    },
+    {
+      title: "Cache Implementation",
+      description:
+        "Created a simple cache system that simulates the behavior of a cache memory. The cache is implemented using logism simulator.",
+      image: "/logismImg.png",
+      githubLink: "https://github.com/Dieg0raf/Cache-Implementation",
     },
     // ... other projects
   ];
@@ -105,22 +128,23 @@ const ProjectShowcase = () => {
 
               <div className="mt-auto">
                 <div className="flex flex-wrap gap-4 mb-6">
-                  {project.techStack.map((tech, techIndex) => (
-                    <div
-                      key={techIndex}
-                      className="group relative flex items-center"
-                      title={tech.name}
-                    >
-                      <img
-                        src={tech.icon}
-                        alt={tech.name}
-                        className="w-6 h-6 hover:scale-110 transition-transform duration-200"
-                      />
-                      <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
-                        {tech.name}
-                      </span>
-                    </div>
-                  ))}
+                  {project.techStack &&
+                    project.techStack.map((tech, techIndex) => (
+                      <div
+                        key={techIndex}
+                        className="group relative flex items-center"
+                        title={tech.name}
+                      >
+                        <img
+                          src={tech.icon}
+                          alt={tech.name}
+                          className="w-6 h-6 hover:scale-110 transition-transform duration-200"
+                        />
+                        <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                          {tech.name}
+                        </span>
+                      </div>
+                    ))}
                 </div>
 
                 <div className="flex justify-end gap-4">
