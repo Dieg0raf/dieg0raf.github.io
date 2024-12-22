@@ -7,13 +7,17 @@ const ProjectShowcase = () => {
       title: "CaMooRa",
       description:
         "Currently, developing CaMooRa, an app that helps UC Davis students easily find and connect with the best photographers for their needs. The platform is designed to be simple and user-friendly, removing unnecessary hurdles and making connections effortless.",
-      image: "/public/logo.svg",
+      image: "/logo.svg",
       demoLink: "https://camoora.io",
       githubLink: "https://github.com/winzamark123/caMOOra",
       techStack: [
         {
           name: "Node.js",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+        },
+        {
+          name: "tRPC",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trpc/trpc-original.svg",
         },
         {
           name: "TypeScript",
@@ -37,7 +41,7 @@ const ProjectShowcase = () => {
       title: "Rivas Pro Painting",
       description:
         "Rivas Pro Painting Inc. web application – a dynamic and user-friendly platform developed to streamline operations for a painting company.",
-      image: "/public/RivasSite.png",
+      image: "/RivasSite.png",
       demoLink: "",
       githubLink: "https://github.com/dieg0raf/RivasProPainting",
       techStack: [
@@ -63,7 +67,7 @@ const ProjectShowcase = () => {
       title: "L-Store Database",
       description:
         "L-Store is a lineage-based database designed and written from scratch. This was a group project created from material of UCDavis's Database class (ECS 165).",
-      image: "/public/MemoryBufferDisk.png",
+      image: "/MemoryBufferDisk.png",
       githubLink: "https://github.com/Dieg0raf/LStore_Database",
       techStack: [
         {
