@@ -20,16 +20,50 @@ const ContactSection = () => {
     setMessage("");
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const serviceId: string = import.meta.env.VITE_SERVICE_ID;
-    const templateId: string = import.meta.env.VITE_TEMPLATE_ID;
-    const publicKey: string = import.meta.env.VITE_PUBLIC_KEY;
+    // Credentials for EmailJS
+    let serviceId: string = "";
+    let templateId: string = "";
+    let publicKey: string = "";
 
-    if (!serviceId || !templateId || !publicKey) {
-      console.error("EmailJS keys are missing");
-      return;
+    try {
+      // Fetch the EmailJS credentials serverless function
+      const response = await fetch(
+        "https://y7b2r43l20.execute-api.us-west-1.amazonaws.com/prod",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ keyWord: "send credentials" }),
+        }
+      );
+
+      // Throw an error if the response is not OK (meaning the request failed)
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("Error response:", errorText);
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      //   Parse the response body
+      const result = await response.json();
+      const parsedBody = JSON.parse(result.body);
+
+      serviceId = parsedBody.service_id;
+      templateId = parsedBody.template_id;
+      publicKey = parsedBody.public_key;
+
+      if (!serviceId || !templateId || !publicKey) {
+        console.error("EmailJS keys are missing");
+        return;
+      }
+
+      resetStates();
+    } catch (error) {
+      console.error("Error sending email", error);
     }
 
     // Get the current count and timestamp from local storage
