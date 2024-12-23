@@ -61,57 +61,61 @@ const ContactSection = () => {
         return;
       }
 
-      resetStates();
+      // Get the current count and timestamp from local storage
+      const messageCount = parseInt(
+        localStorage.getItem("messageCount") || "0",
+        10
+      );
+      const lastMessageTime = parseInt(
+        localStorage.getItem("lastMessageTime") || "0",
+        10
+      );
+      const currentTime = Date.now();
+
+      // Check if the user is allowed to send a message
+      if (
+        messageCount >= MAX_MESSAGES &&
+        currentTime - lastMessageTime < TIME_FRAME
+      ) {
+        alert(
+          "You have reached the maximum number of messages allowed. Please try again later."
+        );
+        return;
+      }
+
+      // Object that contains the data to be sent to the email service
+      const templateParams = {
+        from_name: name,
+        reply_to: email,
+        from_email: email,
+        to_name: "Diego Rafael",
+        message,
+      };
+
+      // Send email using EmailJS
+      emailjs
+        .send(serviceId, templateId, templateParams, publicKey)
+        .then((response) => {
+          console.log(
+            "Email sent successfully",
+            response.status,
+            response.text
+          );
+          alert("Message sent successfully!");
+
+          // Reset the form fields
+          resetStates();
+
+          // Update the count and timestamp in local storage
+          localStorage.setItem("messageCount", (messageCount + 1).toString());
+          localStorage.setItem("lastMessageTime", currentTime.toString());
+        })
+        .catch((error: Error) => {
+          console.error("Error sending email", error);
+        });
     } catch (error) {
       console.error("Error sending email", error);
     }
-
-    // Get the current count and timestamp from local storage
-    const messageCount = parseInt(
-      localStorage.getItem("messageCount") || "0",
-      10
-    );
-    const lastMessageTime = parseInt(
-      localStorage.getItem("lastMessageTime") || "0",
-      10
-    );
-    const currentTime = Date.now();
-
-    // Check if the user is allowed to send a message
-    if (
-      messageCount >= MAX_MESSAGES &&
-      currentTime - lastMessageTime < TIME_FRAME
-    ) {
-      alert(
-        "You have reached the maximum number of messages allowed. Please try again later."
-      );
-      return;
-    }
-
-    // Object that contains the data to be sent to the email service
-    const templateParams = {
-      from_name: name,
-      reply_to: email,
-      from_email: email,
-      to_name: "Diego Rafael",
-      message,
-    };
-
-    // Send email using EmailJS
-    emailjs
-      .send(serviceId, templateId, templateParams, publicKey)
-      .then((response) => {
-        console.log("Email sent successfully", response.status, response.text);
-        alert("Message sent successfully!");
-        resetStates();
-
-        // Update the count and timestamp in local storage
-        localStorage.setItem("messageCount", (messageCount + 1).toString());
-        localStorage.setItem("lastMessageTime", currentTime.toString());
-      })
-      .catch((error: Error) => {
-        console.error("Error sending email", error);
-      });
   };
 
   return (
