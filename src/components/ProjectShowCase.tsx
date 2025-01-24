@@ -13,7 +13,7 @@ const ProjectShowcase = () => {
       demoWord: "Live Site",
       techStack: [
         {
-          name: "Node.js",
+          name: "Next.js",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
         },
         {
@@ -57,23 +57,29 @@ const ProjectShowcase = () => {
       ],
     },
     {
-      title: "Rivas Pro Painting",
+      title: "Rivas Pro Painting v2",
       description:
         "Rivas Pro Painting Inc. web application – a dynamic and user-friendly platform developed to streamline operations for a painting company.",
       image: "/RivasSite.png",
-      githubLink: "https://github.com/dieg0raf/RivasProPainting",
+      demoLink: "https://rivas-pro-painting.com",
+      demoWord: "Live Site",
+      githubLink: "https://github.com/Dieg0raf/RivasProPainting-v2",
       techStack: [
         {
-          name: "Python",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+          name: "Next.js",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
         },
         {
           name: "Django",
           icon: "/djangoLogoLight.svg",
         },
         {
-          name: "Bootstrap",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-plain.svg",
+          name: "Tailwind CSS",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+        },
+        {
+          name: "AWS",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
         },
         {
           name: "PostgreSQL",

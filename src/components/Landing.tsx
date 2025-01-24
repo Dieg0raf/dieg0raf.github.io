@@ -53,7 +53,7 @@ const LandingPage = () => {
             View My Work
           </button>
           <a
-            href="/Diego_Resume_New.pdf"
+            href="/Diego_s_Resume_New_2.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg font-medium border border-gray-700 transition-colors"
