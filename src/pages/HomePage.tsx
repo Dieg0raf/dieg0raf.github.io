@@ -34,7 +34,7 @@ export default function HomePage() {
 
   return (
     <>
-      <main className="relative z-10 max-w-5xl mx-auto space-y-16 px-4">
+      <main className="relative z-10 max-w-5xl mx-auto space-y-16 px-4 pt-20 pb-8 md:py-0">
         <LandingSection />
         <ExperienceSection />
         <SkillsSection />

@@ -51,6 +51,10 @@ const Header = () => {
               </Link>
               <Link
                 to="/projects"
+                onClick={() => {
+                  console.log("scrolling to projects");
+                  window.scrollTo(0, 0);
+                }}
                 className="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Projects
@@ -102,6 +106,23 @@ const Header = () => {
         {isMenuOpen && (
           <div className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <Link
+                to="/"
+                onClick={toggleMenu}
+                className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                Home
+              </Link>
+              <Link
+                to="/projects"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  toggleMenu();
+                }}
+                className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                Projects
+              </Link>
               <button
                 onClick={() => {
                   scrollToSection("my-experience");

@@ -40,7 +40,7 @@ const LandingPage = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <Link
             to={"/projects"}
-            // onClick={() => scrollToSection("my-projects")}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors"
           >
             View My Work
