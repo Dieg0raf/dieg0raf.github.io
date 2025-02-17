@@ -1,48 +1,67 @@
 import { useState } from "react";
-const Header = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerOffset;
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollToSection = (sectionId: string) => {
+    // If we're not on the home page, navigate there first
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: sectionId } });
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
     }
   };
-
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-transparent border-b border-gray-700 backdrop-blur-sm z-50">
       <nav className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold text-white">DR</span>
+            <Link to={"/"} className="text-xl font-bold text-white">
+              DR
+            </Link>
           </div>
           {/* Navigation Links */}
           <div className="hidden sm:block">
             <div className="flex items-center space-x-8">
+              <Link
+                to="/"
+                className="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                to="/projects"
+                className="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Projects
+              </Link>
               <button
                 onClick={() => scrollToSection("my-experience")}
                 className="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Experience
               </button>
-              <button
-                onClick={() => scrollToSection("my-projects")}
-                className="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Projects
-              </button>
+
               <button
                 onClick={() => scrollToSection("my-skills")}
                 className="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
@@ -91,15 +110,6 @@ const Header = () => {
                 className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 Experience
-              </button>
-              <button
-                onClick={() => {
-                  scrollToSection("my-projects");
-                  toggleMenu();
-                }}
-                className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Projects
               </button>
               <button
                 onClick={() => {

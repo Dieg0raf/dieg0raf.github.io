@@ -1,4 +1,5 @@
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   const handleScrollToContent = () => {
@@ -6,21 +7,6 @@ const LandingPage = () => {
       top: window.innerHeight,
       behavior: "smooth",
     });
-  };
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
   };
 
   return (
@@ -33,25 +19,32 @@ const LandingPage = () => {
 
         <div className="space-y-4 mb-8">
           <h2 className="text-2xl md:text-3xl font-medium text-gray-300">
-            Full Stack Developer
+            Junior Software Engineer
           </h2>
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-            I specialize in building scalable web applications and solving
-            complex problems with clean, efficient code. I'm passionate about
-            exploring new technologies and creating impactful products. With
-            over four years of coding experience, I’m always eager to learn and
-            grow.
+            I'm a software engineer focused on building robust applications and
+            solving complex technical challenges. With experience in both
+            software development and web technologies, I enjoy creating
+            efficient solutions through clean code and thoughtful system design.
+          </p>
+
+          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+            When I'm not coding, you'll find me playing soccer or exploring new
+            technologies to expand my engineering toolkit. I bring three and
+            half years of coding experience and a passion for continuous
+            learning.
           </p>
         </div>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <button
-            onClick={() => scrollToSection("my-projects")}
+          <Link
+            to={"/projects"}
+            // onClick={() => scrollToSection("my-projects")}
             className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors"
           >
             View My Work
-          </button>
+          </Link>
           <a
             href="/Diego_s_Resume_New_2.pdf"
             target="_blank"
