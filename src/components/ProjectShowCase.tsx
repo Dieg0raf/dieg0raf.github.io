@@ -1,5 +1,5 @@
 import { ExternalLink, Github } from "lucide-react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 
 const ProjectShowcase = () => {
   const projects = [
@@ -57,9 +57,27 @@ const ProjectShowcase = () => {
       ],
     },
     {
+      title: "Wish Shell",
+      description:
+        "Developed a custom shell implementation in C++ using system calls to understand " +
+        "operating system process management. This project features command execution, " +
+        "process creation, program switching, and I/O redirection. Through this implementation, " +
+        "I gained deep insights into how operating systems handle process creation, program " +
+        "execution, and file descriptor manipulation.",
+      image: "/wish-shell.png",
+      githubLink:
+        "https://github.com/Dieg0raf/ECS150-2025-Winter/blob/main/projects/project_2/wish.cpp",
+      techStack: [
+        {
+          name: "C++",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+        },
+      ],
+    },
+    {
       title: "Rivas Pro Painting v2",
       description:
-        "Rivas Pro Painting Inc. web application – a dynamic and user-friendly platform developed to streamline operations for a painting company.",
+        "Rivas Pro Painting Inc. – a modern, user-friendly website designed to showcase the company’s services, highlight past projects, and make it easy for potential customers to get in touch. The site features a project gallery, service details, and a contact form for requesting a free quote directly from the owner.",
       image: "/RivasSite.png",
       demoLink: "https://rivas-pro-painting.com",
       demoWord: "Live Site",
@@ -129,75 +147,87 @@ const ProjectShowcase = () => {
   ];
 
   return (
-    <section id="my-projects">
-      <h2 className="text-3xl font-bold mb-8 text-center">My Projects</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
-          <Card
-            key={index}
-            className="flex flex-col min-h-[500px] bg-gray-800 border-gray-700 hover:border-gray-600 transition-colors"
-          >
-            <CardHeader className="p-0">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover rounded-t-lg"
-              />
-            </CardHeader>
-            <CardContent className="flex flex-col flex-grow p-6">
-              <h3 className="text-xl font-semibold mb-3 text-white">
-                {project.title}
-              </h3>
-              <p className="text-gray-300 mb-6 flex-grow">
-                {project.description}
-              </p>
+    <section id="my-projects" className="py-16">
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="text-4xl font-bold mb-12 text-center text-white">
+          Featured Projects
+        </h2>
 
-              <div className="mt-auto">
-                <div className="flex flex-wrap gap-4 mb-6">
-                  {project.techStack &&
-                    project.techStack.map((tech, techIndex) => (
+        <div className="grid grid-cols-1 gap-16">
+          {projects.map((project, index) => (
+            <Card
+              key={index}
+              className="bg-gray-800/50 border-gray-700 hover:border-gray-600 transition-all duration-300 overflow-hidden"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Image Section */}
+                <div className="relative h-[400px] lg:h-full min-h-[400px]">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-cover rounded-t-lg lg:rounded-l-lg lg:rounded-tr-none"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent lg:hidden" />
+                </div>
+
+                {/* Content Section */}
+                <div className="p-8 flex flex-col h-full">
+                  <h3 className="text-2xl font-bold mb-6 text-white">
+                    {project.title}
+                  </h3>
+
+                  <div className="prose prose-invert max-w-none mb-8 flex-grow">
+                    <p className="text-gray-300 whitespace-pre-line">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    {project.techStack?.map((tech, techIndex) => (
                       <div
                         key={techIndex}
-                        className="group relative flex items-center"
-                        title={tech.name}
+                        className="group relative flex items-center bg-gray-700/50 rounded-lg px-3 py-2"
                       >
                         <img
                           src={tech.icon}
                           alt={tech.name}
-                          className="w-6 h-6 hover:scale-110 transition-transform duration-200"
+                          className="w-5 h-5 mr-2"
                         />
-                        <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                        <span className="text-sm text-gray-300">
                           {tech.name}
                         </span>
                       </div>
                     ))}
-                </div>
+                  </div>
 
-                <div className="flex justify-end gap-4">
-                  {project.demoLink && (
+                  {/* Links */}
+                  <div className="flex gap-4 mt-auto">
+                    {project.demoLink && (
+                      <a
+                        href={project.demoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                      >
+                        <ExternalLink size={16} />{" "}
+                        {project.demoWord || "Live Demo"}
+                      </a>
+                    )}
                     <a
-                      href={project.demoLink}
+                      href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-400 hover:text-blue-300 flex items-center gap-1"
+                      className="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
                     >
-                      <ExternalLink size={16} /> {project.demoWord || "Demo"}
+                      <Github size={16} /> View Code
                     </a>
-                  )}
-
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white flex items-center gap-1"
-                  >
-                    <Github size={16} /> Code
-                  </a>
+                  </div>
                 </div>
               </div>
-            </CardContent>
-          </Card>
-        ))}
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );
