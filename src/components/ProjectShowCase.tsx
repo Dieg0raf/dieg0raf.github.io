@@ -106,6 +106,28 @@ const ProjectShowcase = () => {
       ],
     },
     {
+      title: "Redis Persistence Framework",
+      description:
+        "Developed a custom Java persistence framework that leverages reflection and annotations " +
+        "to seamlessly store and retrieve objects in Redis. The framework implements advanced " +
+        "features like lazy loading through dynamic proxies, session-based persistence management, " +
+        "and annotation-based object mapping. Built with clean architecture principles, it " +
+        "demonstrates mastery of Java reflection, runtime annotations, and design patterns while " +
+        "maintaining high code quality and separation of concerns.",
+      image: "/redis-framework.webp",
+      githubLink: "https://github.com/Dieg0raf/ECS160-Winter-HW-2", // TODO: Update this link after approval to share
+      techStack: [
+        {
+          name: "Java",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+        },
+        {
+          name: "Redis",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
+        },
+      ],
+    },
+    {
       title: "L-Store Database",
       description:
         "L-Store is a lineage-based database designed and written from scratch. This was a group project created from material of UCDavis's Database class (ECS 165).",
