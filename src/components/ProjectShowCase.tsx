@@ -96,25 +96,6 @@ const ProjectShowcase = () => {
       ],
     },
     {
-      title: "TCP Congestion Control Implementation",
-      description:
-        "Developed a Python-based implementation of TCP congestion control algorithms, leveraging Docker to introduce latency. The project simulates the behavior of algorithms such as TCP Reno, TCP Tahoe, Stop-and-Wait, and Fixed Sliding Window.",
-      image: "/tcpImg.png",
-      githubLink:
-        "https://github.com/Dieg0raf/TCP-Congestion-Control-Implementation",
-      techStack: [
-        {
-          name: "Python",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-        },
-        {
-          name: "Docker",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
-        },
-      ],
-    },
-
-    {
       title: "Wish Shell",
       description:
         "Developed a custom shell implementation in C++ using system calls to understand " +
@@ -133,6 +114,77 @@ const ProjectShowcase = () => {
       ],
     },
 
+    {
+      title: "Social Media Post Processing Pipeline",
+      description:
+        "Designed and implemented a microservice-based pipeline for processing social media posts from Bluesky. " +
+        "The system consists of two Spring Boot microservices: a Moderation Service that filters posts containing banned words " +
+        "and a Hashtag Service that uses LLAMA-3 to generate relevant hashtags for posts. " +
+        "This architecture demonstrates proficiency in designing distributed systems, implementing microservice patterns, " +
+        "and integrating AI capabilities into practical applications.",
+      image: "/pipeline.webp",
+      githubLink:
+        "https://github.com/Dieg0raf/Social-Media-Post-Processing-Pipeline",
+      techStack: [
+        {
+          name: "Java",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+        },
+        {
+          name: "Spring Boot",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
+        },
+        {
+          name: "LLAMA-3",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg", // Using PyTorch icon as a stand-in for LLMs
+        },
+        {
+          name: "Microservices",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg", // Using Docker icon as it's commonly associated with microservices
+        },
+      ],
+    },
+
+    {
+      title: "Unix Utilities Implementation",
+      description:
+        "Implemented a collection of core Unix utilities (cat, grep, zip, unzip) from scratch in C++. " +
+        "Each utility was built using low-level system calls such as open(), read(), write(), and close() " +
+        "rather than high-level C++ streams. The project demonstrates deep understanding of file I/O, " +
+        "command-line argument processing, and run-length encoding compression algorithms while maintaining " +
+        "proper error handling and POSIX-compliant behavior.",
+      image: "/unix-image.webp",
+      githubLink:
+        "https://github.com/Dieg0raf/ECS150-2025-Winter/tree/main/projects/project_1",
+      techStack: [
+        {
+          name: "C++",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+        },
+        {
+          name: "Unix/Linux",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+        },
+      ],
+    },
+    {
+      title: "TCP Congestion Control Implementation",
+      description:
+        "Developed a Python-based implementation of TCP congestion control algorithms, leveraging Docker to introduce latency. The project simulates the behavior of algorithms such as TCP Reno, TCP Tahoe, Stop-and-Wait, and Fixed Sliding Window.",
+      image: "/tcpImg.png",
+      githubLink:
+        "https://github.com/Dieg0raf/TCP-Congestion-Control-Implementation",
+      techStack: [
+        {
+          name: "Python",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+        },
+        {
+          name: "Docker",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+        },
+      ],
+    },
     {
       title: "Redis Persistence Framework",
       description:
