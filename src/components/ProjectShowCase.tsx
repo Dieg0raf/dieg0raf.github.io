@@ -39,38 +39,28 @@ const ProjectShowcase = () => {
       ],
     },
     {
-      title: "TCP Congestion Control Implementation",
+      title: "Distributed File System",
       description:
-        "Developed a Python-based implementation of TCP congestion control algorithms, leveraging Docker to introduce latency. The project simulates the behavior of algorithms such as TCP Reno, TCP Tahoe, Stop-and-Wait, and Fixed Sliding Window.",
-      image: "/tcpImg.png",
+        "Developed a working distributed file server with an HTTP/REST API similar to Amazon S3. " +
+        "The system implements robust file storage with read, write, and delete operations for both files " +
+        "and directories. Built on a custom Unix-style file system implementation with on-disk data " +
+        "structures including inodes, bitmaps, and a directory structure, ensuring crash consistency " +
+        "and proper error handling.",
+      image: "/dfs-project.webp",
       githubLink:
-        "https://github.com/Dieg0raf/TCP-Congestion-Control-Implementation",
-      techStack: [
-        {
-          name: "Python",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-        },
-        {
-          name: "Docker",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
-        },
-      ],
-    },
-    {
-      title: "Wish Shell",
-      description:
-        "Developed a custom shell implementation in C++ using system calls to understand " +
-        "operating system process management. This project features command execution, " +
-        "process creation, program switching, and I/O redirection. Through this implementation, " +
-        "I gained deep insights into how operating systems handle process creation, program " +
-        "execution, and file descriptor manipulation.",
-      image: "/wish-shell.png",
-      githubLink:
-        "https://github.com/Dieg0raf/ECS150-2025-Winter/blob/main/projects/project_2/wish.cpp",
+        "https://github.com/Dieg0raf/ECS150-2025-Winter/tree/main/projects/project_4/gunrock_web",
       techStack: [
         {
           name: "C++",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+        },
+        {
+          name: "HTTP/REST",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
+        },
+        {
+          name: "File Systems",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
         },
       ],
     },
@@ -106,6 +96,44 @@ const ProjectShowcase = () => {
       ],
     },
     {
+      title: "TCP Congestion Control Implementation",
+      description:
+        "Developed a Python-based implementation of TCP congestion control algorithms, leveraging Docker to introduce latency. The project simulates the behavior of algorithms such as TCP Reno, TCP Tahoe, Stop-and-Wait, and Fixed Sliding Window.",
+      image: "/tcpImg.png",
+      githubLink:
+        "https://github.com/Dieg0raf/TCP-Congestion-Control-Implementation",
+      techStack: [
+        {
+          name: "Python",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+        },
+        {
+          name: "Docker",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+        },
+      ],
+    },
+
+    {
+      title: "Wish Shell",
+      description:
+        "Developed a custom shell implementation in C++ using system calls to understand " +
+        "operating system process management. This project features command execution, " +
+        "process creation, program switching, and I/O redirection. Through this implementation, " +
+        "I gained deep insights into how operating systems handle process creation, program " +
+        "execution, and file descriptor manipulation.",
+      image: "/wish-shell.png",
+      githubLink:
+        "https://github.com/Dieg0raf/ECS150-2025-Winter/blob/main/projects/project_2/wish.cpp",
+      techStack: [
+        {
+          name: "C++",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+        },
+      ],
+    },
+
+    {
       title: "Redis Persistence Framework",
       description:
         "Developed a custom Java persistence framework that leverages reflection and annotations " +
@@ -115,7 +143,7 @@ const ProjectShowcase = () => {
         "demonstrates mastery of Java reflection, runtime annotations, and design patterns while " +
         "maintaining high code quality and separation of concerns.",
       image: "/redis-framework.webp",
-      githubLink: "https://github.com/Dieg0raf/ECS160-Winter-HW-2", // TODO: Update this link after approval to share
+      githubLink: "https://github.com/Dieg0raf/Redis-Persistence-Framework", // TODO: Update this link after approval to share
       techStack: [
         {
           name: "Java",
