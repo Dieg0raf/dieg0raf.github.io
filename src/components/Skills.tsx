@@ -4,6 +4,10 @@ const SkillsSection = () => {
   const skills = {
     languages: [
       {
+        name: "C++",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+      },
+      {
         name: "Python",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
       },
@@ -14,10 +18,6 @@ const SkillsSection = () => {
       {
         name: "TypeScript",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
-      },
-      {
-        name: "C++",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
       },
       {
         name: "PHP",

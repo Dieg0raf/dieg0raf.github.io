@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Web Developer (Part-time)",
+      title: "Full-Stack Developer (Part-time)",
       company: "Trinchero Family Estates",
       location: "Lodi, CA",
       duration: "August 2024 - December 2024",
@@ -26,7 +26,7 @@ const ExperienceSection = () => {
       ],
     },
     {
-      title: "Web Developer (Intern)",
+      title: "Full-Stack Developer (Intern)",
       company: "Trinchero Family Estates",
       location: "Lodi, CA",
       duration: "June 2024 - August 2024",
