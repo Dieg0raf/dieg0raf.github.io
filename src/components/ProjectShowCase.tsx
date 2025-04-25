@@ -96,6 +96,24 @@ const ProjectShowcase = () => {
       ],
     },
     {
+      title: "Custom Web Server",
+      description:
+        "Developed a custom web server from scratch in C++, capable of handling HTTP requests, serving static files, and implementing secure file path validation. Gained hands-on experience with socket programming, HTTP protocols, and low-level file I/O operations.",
+      image: "/webserver.png",
+      githubLink: "https://github.com/Dieg0raf/web_server",
+      demoWord: "GitHub Repository",
+      techStack: [
+        {
+          name: "C++",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+        },
+        {
+          name: "Sockets",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg",
+        },
+      ],
+    },
+    {
       title: "Wish Shell",
       description:
         "Developed a custom shell implementation in C++ using system calls to understand " +
