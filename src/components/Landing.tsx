@@ -46,7 +46,7 @@ const LandingPage = () => {
             View My Work
           </Link>
           <a
-            href="/Diego_Rafael_Updated_11.pdf"
+            href="/Diego_Rafael_Resume_15.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg font-medium border border-gray-700 transition-colors"
