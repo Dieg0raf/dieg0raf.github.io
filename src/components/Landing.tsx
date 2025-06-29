@@ -7,8 +7,11 @@ const LandingPage = () => {
       <div className="relative z-10 max-w-3xl w-full text-center flex flex-col items-center gap-8 py-12">
         {/* Name and Title Block */}
         <div className="flex flex-col items-center gap-2">
-          <span className="text-2xl md:text-3xl font-bold tracking-widest text-accent uppercase mb-1">
+          <span className="text-2xl md:text-3xl font-bold tracking-widest text-accent uppercase mb-1 flex items-center gap-2">
             Diego Rafael
+            <span className="text-muted-foreground font-normal normal-case text-base md:text-lg tracking-normal">
+              · CS Graduate
+            </span>
           </span>
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-foreground drop-shadow-lg">
             Systems Software Engineer
@@ -17,8 +20,8 @@ const LandingPage = () => {
         {/* Subtitle */}
         <div className="mt-2">
           <span className="text-xl md:text-2xl text-muted-foreground font-medium">
-            Computer Science graduate passionate about systems, performance, and
-            low-level programming.
+            Learning, developing, and getting better at systems, performance,
+            and low-level programming.
           </span>
         </div>
         {/* CTA Button */}

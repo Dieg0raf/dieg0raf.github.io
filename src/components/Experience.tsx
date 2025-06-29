@@ -127,9 +127,10 @@ const ExperienceSection = () => {
 
   return (
     <section id="my-experience">
-      <h2 className="text-3xl font-bold mb-8 text-center text-white">
+      <h2 className="text-3xl font-bold mb-2 text-center text-foreground">
         Experience
       </h2>
+      <div className="mx-auto mb-8 w-20 h-1 bg-accent rounded-full" />
       <div className="space-y-6">
         {experiences.map((exp, index) => {
           return (

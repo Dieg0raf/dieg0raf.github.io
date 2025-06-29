@@ -166,7 +166,7 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="bg-card border-gray-700 shadow-lg hover:scale-[1.025] hover:shadow-2xl focus-within:scale-[1.025] focus-within:shadow-2xl active:scale-[1.015] active:shadow-xl transition-all duration-200">
+          <Card className="bg-card border-gray-700 shadow-lg">
             <CardContent className="p-6">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>

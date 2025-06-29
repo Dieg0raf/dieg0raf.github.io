@@ -1,10 +1,12 @@
-import { Database, Server, Code2 } from "lucide-react";
-import { useState } from "react";
+import { Database, Server, Code2, Bug } from "lucide-react";
 
 const SkillsSection = () => {
-  const [showAll, setShowAll] = useState(false);
   const skills = {
     languages: [
+      {
+        name: "C",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
+      },
       {
         name: "C++",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
@@ -14,12 +16,20 @@ const SkillsSection = () => {
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
       },
       {
-        name: "JavaScript",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+        name: "Bash",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg",
+      },
+      {
+        name: "Java",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
       },
       {
         name: "TypeScript",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+      {
+        name: "JavaScript",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
       },
       {
         name: "PHP",
@@ -28,10 +38,6 @@ const SkillsSection = () => {
       {
         name: "SQL",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
-      },
-      {
-        name: "Bash",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg",
       },
     ],
     frameworks: [
@@ -48,12 +54,12 @@ const SkillsSection = () => {
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
       },
       {
-        name: "Vite JS",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
-      },
-      {
         name: "Node JS",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+      },
+      {
+        name: "Vite JS",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
       },
       {
         name: "Bootstrap",
@@ -70,24 +76,32 @@ const SkillsSection = () => {
     ],
     tools: [
       {
+        name: "Linux",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+      },
+      {
+        name: "GDB",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gnu/gnu-original.svg",
+      },
+      {
+        name: "LLDB",
+        Component: Bug,
+      },
+      {
         name: "Git",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
       },
       {
-        name: "VS Code",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
-      },
-      {
-        name: "Linux",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+        name: "Docker",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
       },
       {
         name: "AWS",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
       },
       {
-        name: "Docker",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+        name: "VS Code",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
       },
       { name: "REST API", Component: Server },
       { name: "tRPC", Component: Code2 },
@@ -120,7 +134,7 @@ const SkillsSection = () => {
   }
 
   // Helper to show only top N or all
-  const getDisplay = (arr: SkillItem[]) => (showAll ? arr : arr.slice(0, 4));
+  const getDisplay = (arr: SkillItem[]) => arr;
 
   const SkillCard = ({
     title,
@@ -129,7 +143,7 @@ const SkillsSection = () => {
     title: string;
     items: SkillItem[];
   }) => (
-    <div className="bg-card rounded-lg p-6 border border-gray-700 shadow-lg hover:scale-[1.025] hover:shadow-2xl focus-within:scale-[1.025] focus-within:shadow-2xl active:scale-[1.015] active:shadow-xl transition-all duration-200">
+    <div className="bg-card rounded-lg p-6 border border-gray-700 shadow-lg">
       <h3 className="text-lg font-semibold mb-4 text-foreground">{title}</h3>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {items.map((item, index) => (
@@ -163,14 +177,6 @@ const SkillsSection = () => {
         />
         <SkillCard title="Developer Tools" items={getDisplay(skills.tools)} />
         <SkillCard title="Databases" items={getDisplay(skills.databases)} />
-      </div>
-      <div className="flex justify-center mt-6">
-        <button
-          className="px-4 py-2 rounded-md bg-accent text-accent-foreground font-medium hover:bg-primary transition-colors"
-          onClick={() => setShowAll((v) => !v)}
-        >
-          {showAll ? "Show Less" : "Show More"}
-        </button>
       </div>
     </section>
   );
