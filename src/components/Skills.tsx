@@ -129,22 +129,20 @@ const SkillsSection = () => {
     title: string;
     items: SkillItem[];
   }) => (
-    <div className="bg-card rounded-lg p-6 border border-border">
+    <div className="bg-card rounded-lg p-6 border border-gray-700 shadow-lg hover:scale-[1.025] hover:shadow-2xl focus-within:scale-[1.025] focus-within:shadow-2xl active:scale-[1.015] active:shadow-xl transition-all duration-200">
       <h3 className="text-lg font-semibold mb-4 text-foreground">{title}</h3>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {items.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center gap-2 p-2 rounded-lg hover:bg-accent/20 transition-colors"
+            className="flex flex-col items-center gap-2 p-2 rounded-lg"
           >
             {item.icon ? (
               <img src={item.icon} alt={item.name} className="w-7 h-7" />
             ) : item.Component ? (
               <item.Component className="w-7 h-7 text-accent" />
             ) : null}
-            <span className="text-xs text-muted-foreground text-center">
-              {item.name}
-            </span>
+            <span className="text-xs text-white text-center">{item.name}</span>
           </div>
         ))}
       </div>
