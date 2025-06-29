@@ -1,6 +1,8 @@
 import { Database, Server, Code2 } from "lucide-react";
+import { useState } from "react";
 
 const SkillsSection = () => {
+  const [showAll, setShowAll] = useState(false);
   const skills = {
     languages: [
       {
@@ -117,6 +119,9 @@ const SkillsSection = () => {
     Component?: React.ComponentType<{ className?: string }>;
   }
 
+  // Helper to show only top N or all
+  const getDisplay = (arr: SkillItem[]) => (showAll ? arr : arr.slice(0, 4));
+
   const SkillCard = ({
     title,
     items,
@@ -124,20 +129,20 @@ const SkillsSection = () => {
     title: string;
     items: SkillItem[];
   }) => (
-    <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-      <h3 className="text-xl font-semibold mb-4 text-white">{title}</h3>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    <div className="bg-card rounded-lg p-6 border border-border">
+      <h3 className="text-lg font-semibold mb-4 text-foreground">{title}</h3>
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {items.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center gap-2 p-3 rounded-lg hover:bg-gray-700/50 transition-colors"
+            className="flex flex-col items-center gap-2 p-2 rounded-lg hover:bg-accent/20 transition-colors"
           >
             {item.icon ? (
-              <img src={item.icon} alt={item.name} className="w-8 h-8" />
+              <img src={item.icon} alt={item.name} className="w-7 h-7" />
             ) : item.Component ? (
-              <item.Component className="w-8 h-8 text-gray-300" />
+              <item.Component className="w-7 h-7 text-accent" />
             ) : null}
-            <span className="text-sm text-gray-300 text-center">
+            <span className="text-xs text-muted-foreground text-center">
               {item.name}
             </span>
           </div>
@@ -148,14 +153,26 @@ const SkillsSection = () => {
 
   return (
     <section className="pb-16" id="my-skills">
-      <h2 className="text-3xl font-bold mb-8 text-center text-white">
+      <h2 className="text-3xl font-bold mb-2 text-center text-foreground">
         Technical Skills
       </h2>
-      <div className="space-y-6">
-        <SkillCard title="Languages" items={skills.languages} />
-        <SkillCard title="Frameworks & Libraries" items={skills.frameworks} />
-        <SkillCard title="Developer Tools" items={skills.tools} />
-        <SkillCard title="Databases" items={skills.databases} />
+      <div className="mx-auto mb-8 w-20 h-1 bg-accent rounded-full" />
+      <div className="grid md:grid-cols-2 gap-6">
+        <SkillCard title="Languages" items={getDisplay(skills.languages)} />
+        <SkillCard
+          title="Frameworks & Libraries"
+          items={getDisplay(skills.frameworks)}
+        />
+        <SkillCard title="Developer Tools" items={getDisplay(skills.tools)} />
+        <SkillCard title="Databases" items={getDisplay(skills.databases)} />
+      </div>
+      <div className="flex justify-center mt-6">
+        <button
+          className="px-4 py-2 rounded-md bg-accent text-accent-foreground font-medium hover:bg-primary transition-colors"
+          onClick={() => setShowAll((v) => !v)}
+        >
+          {showAll ? "Show Less" : "Show More"}
+        </button>
       </div>
     </section>
   );

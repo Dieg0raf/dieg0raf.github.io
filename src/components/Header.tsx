@@ -31,12 +31,15 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-transparent border-b border-gray-700 backdrop-blur-sm z-50">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-card border-b border-accent shadow-lg">
       <nav className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to={"/"} className="text-xl font-bold text-white">
+            <Link
+              to={"/"}
+              className="text-2xl font-extrabold text-foreground tracking-tight focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-md transition"
+            >
               DR
             </Link>
           </div>
@@ -45,36 +48,34 @@ const Header = () => {
             <div className="flex items-center space-x-8">
               <Link
                 to="/"
-                className="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-foreground hover:text-accent px-3 py-2 rounded-md text-base font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 Home
               </Link>
               <Link
                 to="/projects"
                 onClick={() => {
-                  console.log("scrolling to projects");
                   window.scrollTo(0, 0);
                 }}
-                className="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-foreground hover:text-accent px-3 py-2 rounded-md text-base font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 Projects
               </Link>
               <button
                 onClick={() => scrollToSection("my-experience")}
-                className="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-foreground hover:text-accent px-3 py-2 rounded-md text-base font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 Experience
               </button>
-
               <button
                 onClick={() => scrollToSection("my-skills")}
-                className="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-foreground hover:text-accent px-3 py-2 rounded-md text-base font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 Skills
               </button>
               <button
                 onClick={() => scrollToSection("my-contact")}
-                className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium transition-colors shadow-lg"
+                className="bg-accent text-accent-foreground hover:bg-primary px-4 py-2 rounded-md text-base font-semibold transition-colors shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 Contact
               </button>
@@ -84,7 +85,8 @@ const Header = () => {
           <div className="sm:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-200 hover:text-white focus:outline-none"
+              className="text-foreground hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-md"
+              aria-label="Open menu"
             >
               <svg
                 className="h-6 w-6"
@@ -105,11 +107,11 @@ const Header = () => {
         {/* Mobile menu dropdown */}
         {isMenuOpen && (
           <div className="sm:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-card rounded-b-lg shadow-lg border-t border-accent">
               <Link
                 to="/"
                 onClick={toggleMenu}
-                className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className="text-foreground hover:text-accent block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 Home
               </Link>
@@ -119,7 +121,7 @@ const Header = () => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                   toggleMenu();
                 }}
-                className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className="text-foreground hover:text-accent block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 Projects
               </Link>
@@ -128,7 +130,7 @@ const Header = () => {
                   scrollToSection("my-experience");
                   toggleMenu();
                 }}
-                className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className="text-foreground hover:text-accent block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 Experience
               </button>
@@ -137,7 +139,7 @@ const Header = () => {
                   scrollToSection("my-skills");
                   toggleMenu();
                 }}
-                className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className="text-foreground hover:text-accent block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 Skills
               </button>
@@ -146,7 +148,7 @@ const Header = () => {
                   scrollToSection("my-contact");
                   toggleMenu();
                 }}
-                className="text-gray-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className="bg-accent text-accent-foreground hover:bg-primary block px-4 py-2 rounded-md text-base font-semibold shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 Contact
               </button>

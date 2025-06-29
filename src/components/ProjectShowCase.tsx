@@ -67,7 +67,7 @@ const ProjectShowcase = () => {
     {
       title: "Rivas Pro Painting v2",
       description:
-        "Rivas Pro Painting Inc. – a modern, user-friendly website designed to showcase the company’s services, highlight past projects, and make it easy for potential customers to get in touch. The site features a project gallery, service details, and a contact form for requesting a free quote directly from the owner.",
+        "Rivas Pro Painting Inc. – a modern, user-friendly website designed to showcase the company's services, highlight past projects, and make it easy for potential customers to get in touch. The site features a project gallery, service details, and a contact form for requesting a free quote directly from the owner.",
       image: "/RivasSite.png",
       demoLink: "https://rivas-pro-painting.com",
       demoWord: "Live Site",
@@ -266,87 +266,99 @@ const ProjectShowcase = () => {
     // ... other projects
   ];
 
+  // Helper: get a short description (first sentence or 120 chars)
+  const getShortDescription = (desc: string) => {
+    const firstPeriod = desc.indexOf(".");
+    if (firstPeriod !== -1 && firstPeriod < 120) {
+      return desc.slice(0, firstPeriod + 1);
+    }
+    return desc.length > 120 ? desc.slice(0, 120) + "..." : desc;
+  };
+
   return (
     <section id="my-projects" className="py-16">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center text-white">
+        <h2 className="text-4xl font-bold mb-2 text-center text-foreground">
           Featured Projects
         </h2>
+        <div className="mx-auto mb-12 w-24 h-1 bg-accent rounded-full" />
 
-        <div className="grid grid-cols-1 gap-16">
-          {projects.map((project, index) => (
-            <Card
-              key={index}
-              className="bg-gray-800/50 border-gray-700 hover:border-gray-600 transition-all duration-300 overflow-hidden"
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Image Section */}
-                <div className="relative h-[400px] lg:h-full min-h-[400px]">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="absolute inset-0 w-full h-full object-cover rounded-t-lg lg:rounded-l-lg lg:rounded-tr-none"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent lg:hidden" />
-                </div>
-
-                {/* Content Section */}
-                <div className="p-8 flex flex-col h-full">
-                  <h3 className="text-2xl font-bold mb-6 text-white">
-                    {project.title}
-                  </h3>
-
-                  <div className="prose prose-invert max-w-none mb-8 flex-grow">
-                    <p className="text-gray-300 whitespace-pre-line">
-                      {project.description}
-                    </p>
-                  </div>
-
-                  {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-3 mb-6">
-                    {project.techStack?.map((tech, techIndex) => (
-                      <div
-                        key={techIndex}
-                        className="group relative flex items-center bg-gray-700/50 rounded-lg px-3 py-2"
-                      >
-                        <img
-                          src={tech.icon}
-                          alt={tech.name}
-                          className="w-5 h-5 mr-2"
-                        />
-                        <span className="text-sm text-gray-300">
-                          {tech.name}
-                        </span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
+          {projects.map((project, index) => {
+            const mainLink = project.demoLink || project.githubLink;
+            return (
+              <a
+                key={index}
+                href={mainLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group h-full"
+                tabIndex={0}
+                aria-label={`View project: ${project.title}`}
+              >
+                <Card className="bg-card border border-gray-700 shadow-lg group-hover:scale-[1.025] group-hover:shadow-2xl group-focus-within:scale-[1.025] group-focus-within:shadow-2xl group-active:scale-[1.015] group-active:shadow-xl transition-all duration-200 rounded-xl overflow-hidden flex flex-col cursor-pointer focus-within:ring-2 focus-within:ring-primary/60 h-full">
+                  <div className="flex flex-col h-full">
+                    {/* Image */}
+                    <div className="relative h-48 bg-background flex items-center justify-center border-b border-gray-700">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    {/* Content */}
+                    <div className="flex flex-col flex-1 p-6 gap-4">
+                      <h3 className="text-xl font-bold text-foreground mb-1">
+                        {project.title}
+                      </h3>
+                      <div className="flex flex-wrap gap-2 mb-2">
+                        {project.techStack &&
+                          project.techStack.map((tech, techIndex) => (
+                            <span
+                              key={techIndex}
+                              className="flex items-center gap-1 px-2 py-1 bg-accent/20 text-white border border-gray-700 rounded-full text-xs font-medium"
+                            >
+                              <img
+                                src={tech.icon}
+                                alt={tech.name}
+                                className="w-4 h-4"
+                              />
+                              {tech.name}
+                            </span>
+                          ))}
                       </div>
-                    ))}
+                      <div className="mb-4 flex-1">
+                        {getShortDescription(project.description)}
+                      </div>
+                      <div className="flex gap-2 mt-auto">
+                        {project.demoLink && (
+                          <a
+                            href={project.demoLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-3 py-2 bg-accent hover:bg-primary text-accent-foreground font-semibold rounded-md transition-colors shadow"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <ExternalLink size={16} />{" "}
+                            {project.demoWord || "Live Demo"}
+                          </a>
+                        )}
+                        <a
+                          href={project.githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-3 py-2 bg-accent/20 hover:bg-accent text-white border border-gray-700 font-semibold rounded-md transition-colors shadow"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <Github size={16} /> Code
+                        </a>
+                      </div>
+                    </div>
                   </div>
-
-                  {/* Links */}
-                  <div className="flex gap-4 mt-auto">
-                    {project.demoLink && (
-                      <a
-                        href={project.demoLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
-                      >
-                        <ExternalLink size={16} />{" "}
-                        {project.demoWord || "Live Demo"}
-                      </a>
-                    )}
-                    <a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
-                    >
-                      <Github size={16} /> View Code
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </Card>
-          ))}
+                </Card>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>

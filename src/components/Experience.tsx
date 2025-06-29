@@ -69,54 +69,60 @@ const ExperienceSection = () => {
         Experience
       </h2>
       <div className="space-y-6">
-        {experiences.map((exp, index) => (
-          <Card
-            key={index}
-            className="bg-gray-800 border-gray-700 hover:border-gray-600 transition-all duration-300"
-          >
-            <CardContent className="p-6">
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-1">
-                    {exp.title}
-                  </h3>
-                  <div className="text-blue-400 font-medium mb-2">
-                    {exp.company}
+        {experiences.map((exp, index) => {
+          return (
+            <div
+              key={index}
+              tabIndex={0}
+              className="group outline-none"
+              aria-label={`Experience: ${exp.title} at ${exp.company}`}
+            >
+              <Card className="bg-gray-800 border-black hover:scale-[1.025] hover:shadow-2xl group-hover:scale-[1.025] group-hover:shadow-2xl transition-all duration-300 cursor-pointer focus:ring-2 focus:ring-accent">
+                <CardContent className="p-6">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-1">
+                        {exp.title}
+                      </h3>
+                      <div className="text-blue-400 font-medium mb-2">
+                        {exp.company}
+                      </div>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-3 text-gray-400 text-sm">
+                      <div className="flex items-center gap-1">
+                        <MapPin size={16} />
+                        {exp.location}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Calendar size={16} />
+                        {exp.duration}
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-3 text-gray-400 text-sm">
-                  <div className="flex items-center gap-1">
-                    <MapPin size={16} />
-                    {exp.location}
+
+                  <p className="text-gray-300 mb-4">{exp.description}</p>
+
+                  <ul className="list-disc list-inside space-y-2 text-gray-300 mb-4 ml-4">
+                    {exp.responsibilities.map((resp, idx) => (
+                      <li key={idx}>{resp}</li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-wrap gap-2">
+                    {exp.technologies.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 bg-gray-700/50 rounded-full text-sm text-gray-300 border border-black"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
-                  <div className="flex items-center gap-1">
-                    <Calendar size={16} />
-                    {exp.duration}
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-gray-300 mb-4">{exp.description}</p>
-
-              <ul className="list-disc list-inside space-y-2 text-gray-300 mb-4 ml-4">
-                {exp.responsibilities.map((resp, idx) => (
-                  <li key={idx}>{resp}</li>
-                ))}
-              </ul>
-
-              <div className="flex flex-wrap gap-2">
-                {exp.technologies.map((tech, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3 py-1 bg-gray-700/50 rounded-full text-sm text-gray-300 border border-gray-600"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        ))}
+                </CardContent>
+              </Card>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
