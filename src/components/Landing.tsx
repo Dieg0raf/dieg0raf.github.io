@@ -57,6 +57,28 @@ const LandingPage = () => {
           >
             <Mail className="w-6 h-6 md:w-7 md:h-7" />
           </a>
+          <a
+            href="/Diego_Rafael_Resume_15.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-accent transition-colors"
+            aria-label="Resume PDF"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6 md:w-7 md:h-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
