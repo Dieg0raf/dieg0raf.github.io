@@ -83,7 +83,7 @@ const ExperienceSection = () => {
       company: "ASUCD Pantry",
       icon: "/pantry-logo.png",
       location: "Davis, CA",
-      duration: "September 2022 - October 2024",
+      duration: "September 2023 - October 2024",
       description: (
         <>
           Developed and maintained the ASUCD Pantry website, a platform that

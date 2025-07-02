@@ -6,7 +6,7 @@ const ProjectShowcase = () => {
     {
       title: "CaMooRa",
       description:
-        "Currently, developing CaMooRa, an app that helps UC Davis students easily find and connect with the best photographers for their needs. The platform is designed to be simple and user-friendly, removing unnecessary hurdles and making connections effortless.",
+        "Developed a platform for UC Davis students to easily connect with photographers, streamlining the booking process and improving campus event coverage.",
       image: "/logo.svg",
       demoLink: "https://camoora.io",
       githubLink: "https://github.com/winzamark123/caMOOra",
@@ -41,11 +41,7 @@ const ProjectShowcase = () => {
     {
       title: "Distributed File System",
       description:
-        "Developed a working distributed file server with an HTTP/REST API similar to Amazon S3. " +
-        "The system implements robust file storage with read, write, and delete operations for both files " +
-        "and directories. Built on a custom Unix-style file system implementation with on-disk data " +
-        "structures including inodes, bitmaps, and a directory structure, ensuring crash consistency " +
-        "and proper error handling.",
+        "Built a distributed file server with a custom Unix-style file system, supporting robust file operations and crash consistency.",
       image: "/dfs-project.webp",
       githubLink:
         "https://github.com/Dieg0raf/ECS150-2025-Winter/tree/main/projects/project_4/gunrock_web",
@@ -67,7 +63,7 @@ const ProjectShowcase = () => {
     {
       title: "Rivas Pro Painting v2",
       description:
-        "Rivas Pro Painting Inc. – a modern, user-friendly website designed to showcase the company's services, highlight past projects, and make it easy for potential customers to get in touch. The site features a project gallery, service details, and a contact form for requesting a free quote directly from the owner.",
+        "Created a modern website for a painting company, featuring a project gallery, service details, and a direct contact form for quotes.",
       image: "/RivasSite.png",
       demoLink: "https://rivas-pro-painting.com",
       demoWord: "Live Site",
@@ -98,7 +94,7 @@ const ProjectShowcase = () => {
     {
       title: "Custom Web Server",
       description:
-        "Developed a custom web server from scratch in C++, capable of handling HTTP requests, serving static files, and implementing secure file path validation. Gained hands-on experience with socket programming, HTTP protocols, and low-level file I/O operations.",
+        "Implemented an HTTP web server in C++ to handle static files and secure file path validation, gaining hands-on experience with sockets and protocols.",
       image: "/webserver.png",
       githubLink: "https://github.com/Dieg0raf/web_server",
       demoWord: "GitHub Repository",
@@ -116,11 +112,7 @@ const ProjectShowcase = () => {
     {
       title: "Wish Shell",
       description:
-        "Developed a custom shell implementation in C++ using system calls to understand " +
-        "operating system process management. This project features command execution, " +
-        "process creation, program switching, and I/O redirection. Through this implementation, " +
-        "I gained deep insights into how operating systems handle process creation, program " +
-        "execution, and file descriptor manipulation.",
+        "Developed a custom shell in C++ to understand OS process management, including command execution and I/O redirection.",
       image: "/wish-shell.png",
       githubLink:
         "https://github.com/Dieg0raf/ECS150-2025-Winter/blob/main/projects/project_2/wish.cpp",
@@ -135,11 +127,7 @@ const ProjectShowcase = () => {
     {
       title: "Social Media Post Processing Pipeline",
       description:
-        "Designed and implemented a microservice-based pipeline for processing social media posts from Bluesky. " +
-        "The system consists of two Spring Boot microservices: a Moderation Service that filters posts containing banned words " +
-        "and a Hashtag Service that uses LLAMA-3 to generate relevant hashtags for posts. " +
-        "This architecture demonstrates proficiency in designing distributed systems, implementing microservice patterns, " +
-        "and integrating AI capabilities into practical applications.",
+        "Designed a microservice pipeline for Bluesky posts, using AI for moderation and hashtag generation to demonstrate distributed systems skills.",
       image: "/pipeline.webp",
       githubLink:
         "https://github.com/Dieg0raf/Social-Media-Post-Processing-Pipeline",
@@ -166,11 +154,7 @@ const ProjectShowcase = () => {
     {
       title: "Unix Utilities Implementation",
       description:
-        "Implemented a collection of core Unix utilities (cat, grep, zip, unzip) from scratch in C++. " +
-        "Each utility was built using low-level system calls such as open(), read(), write(), and close() " +
-        "rather than high-level C++ streams. The project demonstrates deep understanding of file I/O, " +
-        "command-line argument processing, and run-length encoding compression algorithms while maintaining " +
-        "proper error handling and POSIX-compliant behavior.",
+        "Recreated core Unix utilities (cat, grep, zip, unzip) in C++ using low-level system calls, demonstrating deep understanding of file I/O and POSIX standards.",
       image: "/unix-image.webp",
       githubLink:
         "https://github.com/Dieg0raf/ECS150-2025-Winter/tree/main/projects/project_1",
@@ -188,7 +172,7 @@ const ProjectShowcase = () => {
     {
       title: "TCP Congestion Control Implementation",
       description:
-        "Developed a Python-based implementation of TCP congestion control algorithms, leveraging Docker to introduce latency. The project simulates the behavior of algorithms such as TCP Reno, TCP Tahoe, Stop-and-Wait, and Fixed Sliding Window.",
+        "Simulated TCP congestion control algorithms in Python and Docker, visualizing network behavior and protocol performance.",
       image: "/tcpImg.png",
       githubLink:
         "https://github.com/Dieg0raf/TCP-Congestion-Control-Implementation",
@@ -206,14 +190,9 @@ const ProjectShowcase = () => {
     {
       title: "Redis Persistence Framework",
       description:
-        "Developed a custom Java persistence framework that leverages reflection and annotations " +
-        "to seamlessly store and retrieve objects in Redis. The framework implements advanced " +
-        "features like lazy loading through dynamic proxies, session-based persistence management, " +
-        "and annotation-based object mapping. Built with clean architecture principles, it " +
-        "demonstrates mastery of Java reflection, runtime annotations, and design patterns while " +
-        "maintaining high code quality and separation of concerns.",
+        "Built a Java framework for object persistence in Redis, leveraging reflection, annotations, and clean architecture principles.",
       image: "/redis-framework.webp",
-      githubLink: "https://github.com/Dieg0raf/Redis-Persistence-Framework", // TODO: Update this link after approval to share
+      githubLink: "https://github.com/Dieg0raf/Redis-Persistence-Framework",
       techStack: [
         {
           name: "Java",
@@ -228,7 +207,7 @@ const ProjectShowcase = () => {
     {
       title: "L-Store Database",
       description:
-        "L-Store is a lineage-based database designed and written from scratch. This was a group project created from material of UCDavis's Database class (ECS 165).",
+        "Developed a lineage-based database from scratch as a group project, implementing core database concepts and storage techniques.",
       image: "/MemoryBufferDisk.png",
       githubLink: "https://github.com/Dieg0raf/LStore_Database",
       techStack: [
@@ -241,7 +220,7 @@ const ProjectShowcase = () => {
     {
       title: "Calorie Tracker",
       description:
-        "Calorie Tracker api is a Django REST API that allows users to track their daily calorie intake. Users can create an account, log in, and track their daily calorie intake.",
+        "Created a Django REST API for users to track daily calorie intake, supporting account creation and secure logging.",
       image: "/djangoImg.jpg",
       githubLink: "https://github.com/Dieg0raf/Calorie-Tracker",
       techStack: [
@@ -258,7 +237,7 @@ const ProjectShowcase = () => {
     {
       title: "Cache Implementation",
       description:
-        "Created a simple cache system that simulates the behavior of a cache memory. The cache is implemented using logism simulator.",
+        "Simulated cache memory behavior using Logisim, demonstrating understanding of caching principles and digital logic.",
       image: "/logismImg.png",
       githubLink: "https://github.com/Dieg0raf/Cache-Implementation",
     },
@@ -266,13 +245,13 @@ const ProjectShowcase = () => {
     // ... other projects
   ];
 
-  // Helper: get a short description (first sentence or 120 chars)
+  // Helper: get a short description (first sentence or 200 chars) (able to change depending on the project)
   const getShortDescription = (desc: string) => {
     const firstPeriod = desc.indexOf(".");
-    if (firstPeriod !== -1 && firstPeriod < 120) {
+    if (firstPeriod !== -1 && firstPeriod < 200) {
       return desc.slice(0, firstPeriod + 1);
     }
-    return desc.length > 120 ? desc.slice(0, 120) + "..." : desc;
+    return desc.length > 200 ? desc.slice(0, 200) + "..." : desc;
   };
 
   return (
