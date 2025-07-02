@@ -18,7 +18,7 @@ const ExperienceSection = () => {
             </span>{" "}
             (June–August 2024, June–August 2025) and{" "}
             <span className="font-semibold text-accent">
-              Part-Time Developer
+              Part-Time Full Stack Developer
             </span>{" "}
             (August–December 2024), working on accessibility, backend, and
             infrastructure projects for Sutter Home and other company sites.
