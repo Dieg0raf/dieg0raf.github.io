@@ -40,3 +40,53 @@
 .read-the-docs {
   color: #888;
 }
+
+:root {
+  --background: 232 28% 22%;      /* #292D3E */
+  --foreground: 232 100% 98%;     /* #EEFFFF */
+  --card: 232 26% 28%;            /* #34375A */
+  --card-foreground: 232 100% 98%;/* #EEFFFF */
+  --primary: 267 70% 72%;         /* #C792EA */
+  --primary-foreground: 232 100% 98%; /* #EEFFFF */
+  --secondary: 199 100% 75%;      /* #89DDFF */
+  --secondary-foreground: 232 100% 98%; /* #EEFFFF */
+  --muted: 232 16% 36%;           /* #444267 */
+  --muted-foreground: 232 30% 70%;/* #A6ACCD */
+  --accent: 267 70% 72%;          /* #C792EA */
+  --accent-foreground: 232 100% 98%; /* #EEFFFF */
+  --destructive: 0 80% 60%;       /* #FF5370 */
+  --destructive-foreground: 232 100% 98%; /* #EEFFFF */
+  --border: 232 16% 36%;          /* #444267 */
+  --input: 232 16% 36%;           /* #444267 */
+  --ring: 267 70% 72%;            /* #C792EA */
+  --chart-1: 267 70% 72%;         /* #C792EA */
+  --chart-2: 199 100% 75%;        /* #89DDFF */
+  --chart-3: 0 80% 60%;           /* #FF5370 */
+  --chart-4: 232 26% 28%;         /* #34375A */
+  --chart-5: 232 100% 98%;        /* #EEFFFF */
+}
+
+.dark {
+  --background: 232 28% 22%;
+  --foreground: 232 100% 98%;
+  --card: 232 26% 28%;
+  --card-foreground: 232 100% 98%;
+  --primary: 267 70% 72%;
+  --primary-foreground: 232 100% 98%;
+  --secondary: 199 100% 75%;
+  --secondary-foreground: 232 100% 98%;
+  --muted: 232 16% 36%;
+  --muted-foreground: 232 30% 70%;
+  --accent: 267 70% 72%;
+  --accent-foreground: 232 100% 98%;
+  --destructive: 0 80% 60%;
+  --destructive-foreground: 232 100% 98%;
+  --border: 232 16% 36%;
+  --input: 232 16% 36%;
+  --ring: 267 70% 72%;
+  --chart-1: 267 70% 72%;
+  --chart-2: 199 100% 75%;
+  --chart-3: 0 80% 60%;
+  --chart-4: 232 26% 28%;
+  --chart-5: 232 100% 98%;
+}

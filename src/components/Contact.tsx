@@ -166,7 +166,7 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="bg-gray-800 border-gray-700">
+          <Card className="bg-card border-gray-700 shadow-lg">
             <CardContent className="p-6">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
@@ -176,7 +176,7 @@ const ContactSection = () => {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400"
+                    className="bg-card border-gray-700 text-white placeholder:text-muted-foreground"
                   />
                 </div>
 
@@ -187,7 +187,7 @@ const ContactSection = () => {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400"
+                    className="bg-card border-gray-700 text-white placeholder:text-muted-foreground"
                   />
                 </div>
 
@@ -197,13 +197,13 @@ const ContactSection = () => {
                     required
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400 min-h-[150px]"
+                    className="bg-card border-gray-700 text-white placeholder:text-muted-foreground min-h-[150px]"
                   />
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                  className="w-full bg-accent hover:bg-primary text-accent-foreground font-semibold rounded-md transition-colors shadow"
                 >
                   Send Message
                 </Button>
