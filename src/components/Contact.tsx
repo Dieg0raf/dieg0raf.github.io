@@ -174,7 +174,7 @@ const ContactSection = () => {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="bg-card  text-white placeholder:text-muted-foreground"
+                    className="bg-card border-gray-400 placeholder:text-muted-foreground"
                   />
                 </div>
 
@@ -185,7 +185,7 @@ const ContactSection = () => {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="bg-card  text-white placeholder:text-muted-foreground"
+                    className="bg-card border-gray-400 placeholder:text-muted-foreground"
                   />
                 </div>
 
@@ -195,7 +195,7 @@ const ContactSection = () => {
                     required
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="bg-card  text-white placeholder:text-muted-foreground min-h-[150px]"
+                    className="bg-card border-gray-400 placeholder:text-muted-foreground min-h-[150px]"
                   />
                 </div>
 
