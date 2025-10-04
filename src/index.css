@@ -6,58 +6,58 @@
 @layer base {
   :root {
     font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-    --background: 244 27% 18%;      /* #22223B */
-    --foreground: 240 28% 97%;      /* #F4F4F9 */
-    --card: 243 33% 24%;            /* #2C2C54 */
-    --card-foreground: 240 28% 97%; /* #F4F4F9 */
-    --popover: 243 33% 24%;         /* #2C2C54 */
-    --popover-foreground: 240 28% 97%;/* #F4F4F9 */
-    --primary: 217 91% 60%;         /* #3B82F6 */
-    --primary-foreground: 240 28% 97%; /* #F4F4F9 */
-    --secondary: 217 91% 60%;       /* #3B82F6 */
-    --secondary-foreground: 240 28% 97%; /* #F4F4F9 */
-    --muted: 244 20% 28%;           /* #35355C */
-    --muted-foreground: 240 20% 70%;/* #B0B3C6 */
-    --accent: 217 91% 60%;          /* #3B82F6 */
-    --accent-foreground: 240 28% 97%; /* #F4F4F9 */
-    --destructive: 0 80% 60%;       /* #FF5370 */
-    --destructive-foreground: 240 28% 97%; /* #F4F4F9 */
-    --border: 217 91% 60%;          /* #3B82F6 */
-    --input: 244 20% 28%;           /* #35355C */
-    --ring: 217 91% 60%;            /* #3B82F6 */
-    --chart-1: 217 91% 60%;         /* #3B82F6 */
-    --chart-2: 217 91% 60%;         /* #3B82F6 */
-    --chart-3: 0 80% 60%;           /* #FF5370 */
-    --chart-4: 243 33% 24%;         /* #2C2C54 */
-    --chart-5: 240 28% 97%;         /* #F4F4F9 */
+    --background: 0 0% 88%;         /* #E0D9D9 - Light background */
+    --foreground: 0 30% 26%;        /* #432323 - Dark red-brown text */
+    --card: 0 0% 88%;               /* #E0D9D9 - Light card background */
+    --card-foreground: 0 30% 26%;   /* #432323 - Dark red-brown text on cards */
+    --popover: 0 0% 88%;            /* #E0D9D9 - Light popover background */
+    --popover-foreground: 0 30% 26%;/* #432323 - Dark red-brown text on popover */
+    --primary: 0 30% 26%;           /* #432323 - Dark red-brown primary */
+    --primary-foreground: 0 0% 88%; /* #E0D9D9 - Light text on primary */
+    --secondary: 180 20% 35%;       /* #2F5755 - Dark teal secondary */
+    --secondary-foreground: 0 0% 88%; /* #E0D9D9 - Light text on secondary */
+    --muted: 180 20% 35%;           /* #2F5755 - Dark teal muted */
+    --muted-foreground: 0 0% 60%;   /* #999999 - Muted text */
+    --accent: 180 30% 40%;          /* #5A9690 - Teal accent */
+    --accent-foreground: 0 0% 88%;  /* #E0D9D9 - Light text on accent */
+    --destructive: 0 30% 26%;       /* #432323 - Dark red-brown destructive */
+    --destructive-foreground: 0 0% 88%; /* #E0D9D9 - Light text on destructive */
+    --border: 180 20% 35%;          /* #2F5755 - Dark teal borders */
+    --input: 0 0% 88%;              /* #E0D9D9 - Light input background */
+    --ring: 0 30% 26%;              /* #432323 - Dark red-brown focus ring */
+    --chart-1: 0 30% 26%;           /* #432323 - Dark red-brown chart */
+    --chart-2: 180 20% 35%;         /* #2F5755 - Dark teal chart */
+    --chart-3: 180 30% 40%;         /* #5A9690 - Teal chart */
+    --chart-4: 0 0% 60%;            /* #999999 - Gray chart */
+    --chart-5: 0 0% 88%;            /* #E0D9D9 - Light chart */
     --radius: 0.5rem;
   }
   .dark {
     font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-    --background: 244 27% 18%;
-    --foreground: 240 28% 97%;
-    --card: 243 33% 24%;
-    --card-foreground: 240 28% 97%;
-    --popover: 243 33% 24%;
-    --popover-foreground: 240 28% 97%;
-    --primary: 217 91% 60%;
-    --primary-foreground: 240 28% 97%;
-    --secondary: 217 91% 60%;
-    --secondary-foreground: 240 28% 97%;
-    --muted: 244 20% 28%;
-    --muted-foreground: 240 20% 70%;
-    --accent: 217 91% 60%;
-    --accent-foreground: 240 28% 97%;
-    --destructive: 0 80% 60%;
-    --destructive-foreground: 240 28% 97%;
-    --border: 217 91% 60%;
-    --input: 244 20% 28%;
-    --ring: 217 91% 60%;
-    --chart-1: 217 91% 60%;
-    --chart-2: 217 91% 60%;
-    --chart-3: 0 80% 60%;
-    --chart-4: 243 33% 24%;
-    --chart-5: 240 28% 97%;
+    --background: 0 0% 10%;         /* Dark background for dark mode */
+    --foreground: 0 0% 88%;         /* #E0D9D9 - Light text in dark mode */
+    --card: 0 0% 15%;               /* Dark card background */
+    --card-foreground: 0 0% 88%;    /* Light text on dark cards */
+    --popover: 0 0% 15%;            /* Dark popover background */
+    --popover-foreground: 0 0% 88%; /* Light text on dark popover */
+    --primary: 0 30% 26%;           /* #432323 - Dark red-brown primary */
+    --primary-foreground: 0 0% 88%; /* Light text on primary */
+    --secondary: 180 20% 35%;       /* #2F5755 - Dark teal secondary */
+    --secondary-foreground: 0 0% 88%; /* Light text on secondary */
+    --muted: 180 20% 35%;           /* #2F5755 - Dark teal muted */
+    --muted-foreground: 0 0% 70%;   /* Muted text in dark mode */
+    --accent: 180 30% 40%;          /* #5A9690 - Teal accent */
+    --accent-foreground: 0 0% 88%;  /* Light text on accent */
+    --destructive: 0 30% 26%;       /* #432323 - Dark red-brown destructive */
+    --destructive-foreground: 0 0% 88%; /* Light text on destructive */
+    --border: 180 20% 35%;          /* #2F5755 - Dark teal borders */
+    --input: 0 0% 15%;              /* Dark input background */
+    --ring: 0 30% 26%;              /* #432323 - Dark red-brown focus ring */
+    --chart-1: 0 30% 26%;           /* #432323 - Dark red-brown chart */
+    --chart-2: 180 20% 35%;         /* #2F5755 - Dark teal chart */
+    --chart-3: 180 30% 40%;         /* #5A9690 - Teal chart */
+    --chart-4: 0 0% 60%;            /* Gray chart */
+    --chart-5: 0 0% 88%;            /* #E0D9D9 - Light chart */
   }
 }
 @layer base {

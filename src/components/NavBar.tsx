@@ -35,14 +35,14 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 relative group">
             <div
-              className={`w-10 h-10 flex items-center justify-center text-lg font-extrabold tracking-tight focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-md transition-all duration-200  `}
+              className={`w-10 h-10 flex items-center justify-center text-lg font-extrabold text-foreground tracking-tight focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-md transition-all duration-200 hover:scale-110 active:scale-95`}
             >
               DR
             </div>
             {/* Enhanced Tooltip */}
-            <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
+            <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 px-3 py-2 bg-primary text-primary-foreground text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
               Diego Rafael
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 w-2 h-2 bg-gray-900 rotate-45"></div>
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 w-2 h-2 bg-primary rotate-45"></div>
             </div>
           </div>
 
@@ -57,8 +57,8 @@ const Navbar = () => {
                 }}
                 className={`w-10 h-10 flex items-center justify-center rounded-md transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent hover:scale-110 active:scale-95 ${
                   activeSection === "home"
-                    ? "text-blue-500 bg-blue-500/10"
-                    : "text-foreground hover:text-accent hover:bg-accent/10"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground hover:bg-primary/10"
                 }`}
               >
                 <svg
@@ -76,9 +76,9 @@ const Navbar = () => {
                 </svg>
               </Link>
               {/* Enhanced Tooltip */}
-              <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
+              <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 px-3 py-2 bg-primary text-primary-foreground text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
                 Home
-                <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 w-2 h-2 bg-gray-900 rotate-45"></div>
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 w-2 h-2 bg-primary rotate-45"></div>
               </div>
             </div>
 
@@ -88,8 +88,8 @@ const Navbar = () => {
                 onClick={() => scrollToSection("my-experience")}
                 className={`w-10 h-10 flex items-center justify-center rounded-md transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent hover:scale-110 active:scale-95 ${
                   activeSection === "experience"
-                    ? "text-blue-500 bg-blue-500/10"
-                    : "text-foreground hover:text-accent hover:bg-accent/10"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground hover:bg-primary/10"
                 }`}
               >
                 <svg
@@ -107,9 +107,9 @@ const Navbar = () => {
                 </svg>
               </button>
               {/* Enhanced Tooltip */}
-              <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
+              <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 px-3 py-2 bg-primary text-primary-foreground text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
                 Experience
-                <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 w-2 h-2 bg-gray-900 rotate-45"></div>
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 w-2 h-2 bg-primary rotate-45"></div>
               </div>
             </div>
 
@@ -119,8 +119,8 @@ const Navbar = () => {
                 onClick={() => scrollToSection("my-skills")}
                 className={`w-10 h-10 flex items-center justify-center rounded-md transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent hover:scale-110 active:scale-95 ${
                   activeSection === "skills"
-                    ? "text-blue-500 bg-blue-500/10"
-                    : "text-foreground hover:text-accent hover:bg-accent/10"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground hover:bg-primary/10"
                 }`}
               >
                 <svg
@@ -138,9 +138,9 @@ const Navbar = () => {
                 </svg>
               </button>
               {/* Enhanced Tooltip */}
-              <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
+              <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 px-3 py-2 bg-primary text-primary-foreground text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
                 Skills
-                <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 w-2 h-2 bg-gray-900 rotate-45"></div>
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 w-2 h-2 bg-primary rotate-45"></div>
               </div>
             </div>
 
@@ -150,8 +150,8 @@ const Navbar = () => {
                 onClick={() => scrollToSection("my-projects")}
                 className={`w-10 h-10 flex items-center justify-center rounded-md transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent hover:scale-110 active:scale-95 ${
                   activeSection === "projects"
-                    ? "text-blue-500 bg-blue-500/10"
-                    : "text-foreground hover:text-accent hover:bg-accent/10"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground hover:bg-primary/10"
                 }`}
               >
                 <svg
@@ -169,9 +169,9 @@ const Navbar = () => {
                 </svg>
               </button>
               {/* Enhanced Tooltip */}
-              <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
+              <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 px-3 py-2 bg-primary text-primary-foreground text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
                 Projects
-                <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 w-2 h-2 bg-gray-900 rotate-45"></div>
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 w-2 h-2 bg-primary rotate-45"></div>
               </div>
             </div>
           </div>
@@ -182,8 +182,8 @@ const Navbar = () => {
               onClick={() => scrollToSection("my-contact")}
               className={`w-10 h-10 flex items-center justify-center rounded-md transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent hover:scale-110 active:scale-95 ${
                 activeSection === "contact"
-                  ? "text-blue-500 bg-blue-500/10"
-                  : "text-foreground hover:text-accent hover:bg-accent/10"
+                  ? "bg-accent text-accent-foreground"
+                  : "text-foreground hover:bg-accent/10"
               }`}
             >
               <svg
@@ -201,16 +201,16 @@ const Navbar = () => {
               </svg>
             </button>
             {/* Enhanced Tooltip */}
-            <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
+            <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 px-3 py-2 bg-accent text-accent-foreground text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
               Contact
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 w-2 h-2 bg-gray-900 rotate-45"></div>
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 w-2 h-2 bg-accent rotate-45"></div>
             </div>
           </div>
         </nav>
       </aside>
 
       {/* Mobile Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-card border-b border-accent shadow-lg lg:hidden">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-card border-b border-border shadow-lg lg:hidden">
         <nav className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -248,7 +248,7 @@ const Navbar = () => {
           {/* Mobile menu dropdown */}
           {isMenuOpen && (
             <div>
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-card rounded-b-lg shadow-lg border-t border-accent">
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-card rounded-b-lg shadow-lg border-t border-border">
                 <Link
                   to="/"
                   onClick={toggleMenu}
@@ -289,7 +289,7 @@ const Navbar = () => {
                     scrollToSection("my-contact");
                     toggleMenu();
                   }}
-                  className="bg-accent text-accent-foreground hover:bg-primary block px-4 py-2 rounded-md text-base font-semibold shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  className="bg-accent text-accent-foreground hover:bg-accent/90 block px-4 py-2 rounded-md text-base font-semibold shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   Contact
                 </button>
