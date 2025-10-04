@@ -275,19 +275,21 @@ const ProjectShowcase = () => {
                 tabIndex={0}
                 aria-label={`View project: ${project.title}`}
               >
-                <Card className="bg-card border border-gray-700 shadow-lg group-hover:scale-[1.025] group-hover:shadow-2xl group-focus-within:scale-[1.025] group-focus-within:shadow-2xl group-active:scale-[1.015] group-active:shadow-xl transition-all duration-200 rounded-xl overflow-hidden flex flex-col cursor-pointer focus-within:ring-2 focus-within:ring-primary/60 h-full">
+                <Card className="bg-gradient-to-br from-card to-card/80 border border-border/50 shadow-lg group-hover:shadow-xl group-hover:shadow-primary/5 group-focus-within:shadow-xl group-focus-within:shadow-primary/5 transition-shadow duration-200 rounded-2xl overflow-hidden flex flex-col cursor-pointer focus-within:ring-2 focus-within:ring-primary/40 focus-within:border-primary/30 h-full">
                   <div className="flex flex-col h-full">
                     {/* Image */}
-                    <div className="relative h-48 bg-background flex items-center justify-center border-b border-gray-700">
+                    <div className="relative h-48 bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center border-b border-border/30 overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
                       <img
                         src={project.image}
                         alt={project.title}
                         className="w-full h-full object-cover"
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                     </div>
                     {/* Content */}
                     <div className="flex flex-col flex-1 p-6 gap-4">
-                      <h3 className="text-xl font-bold text-foreground mb-1">
+                      <h3 className="text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors duration-150">
                         {project.title}
                       </h3>
                       <div className="flex flex-wrap gap-2 mb-2">
@@ -295,7 +297,7 @@ const ProjectShowcase = () => {
                           project.techStack.map((tech, techIndex) => (
                             <span
                               key={techIndex}
-                              className="flex items-center gap-1 px-2 py-1 bg-accent/20 text-white border border-gray-700 rounded-full text-xs font-medium"
+                              className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-secondary/10 to-accent/10 text-foreground border border-border/40 rounded-full text-xs font-medium hover:from-secondary/20 hover:to-accent/20 hover:border-accent/40 transition-colors duration-150"
                             >
                               <img
                                 src={tech.icon}
@@ -306,7 +308,7 @@ const ProjectShowcase = () => {
                             </span>
                           ))}
                       </div>
-                      <div className="mb-4 flex-1">
+                      <div className="mb-4 flex-1 text-muted-foreground leading-relaxed">
                         {getShortDescription(project.description)}
                       </div>
                       <div className="flex gap-2 mt-auto">
@@ -315,7 +317,7 @@ const ProjectShowcase = () => {
                             href={project.demoLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-3 py-2 bg-accent hover:bg-primary text-accent-foreground font-semibold rounded-md transition-colors shadow"
+                            className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-accent to-accent/90 hover:from-accent/90 hover:to-accent text-accent-foreground font-semibold rounded-lg transition-colors duration-150 shadow-md hover:shadow-lg"
                             onClick={(e) => e.stopPropagation()}
                           >
                             <ExternalLink size={16} />{" "}
@@ -326,7 +328,7 @@ const ProjectShowcase = () => {
                           href={project.githubLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-3 py-2 bg-accent/20 hover:bg-accent text-white border border-gray-700 font-semibold rounded-md transition-colors shadow"
+                          className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-secondary/10 to-accent/10 hover:from-secondary/20 hover:to-accent/20 text-foreground border border-border/40 hover:border-accent/40 font-semibold rounded-lg transition-colors duration-150 shadow-md hover:shadow-lg"
                           onClick={(e) => e.stopPropagation()}
                         >
                           <Github size={16} /> Code

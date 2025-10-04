@@ -42,51 +42,51 @@
 }
 
 :root {
-  --background: 232 28% 22%;      /* #292D3E */
-  --foreground: 232 100% 98%;     /* #EEFFFF */
-  --card: 232 26% 28%;            /* #34375A */
-  --card-foreground: 232 100% 98%;/* #EEFFFF */
-  --primary: 267 70% 72%;         /* #C792EA */
-  --primary-foreground: 232 100% 98%; /* #EEFFFF */
-  --secondary: 199 100% 75%;      /* #89DDFF */
-  --secondary-foreground: 232 100% 98%; /* #EEFFFF */
-  --muted: 232 16% 36%;           /* #444267 */
-  --muted-foreground: 232 30% 70%;/* #A6ACCD */
-  --accent: 267 70% 72%;          /* #C792EA */
-  --accent-foreground: 232 100% 98%; /* #EEFFFF */
-  --destructive: 0 80% 60%;       /* #FF5370 */
-  --destructive-foreground: 232 100% 98%; /* #EEFFFF */
-  --border: 232 16% 36%;          /* #444267 */
-  --input: 232 16% 36%;           /* #444267 */
-  --ring: 267 70% 72%;            /* #C792EA */
-  --chart-1: 267 70% 72%;         /* #C792EA */
-  --chart-2: 199 100% 75%;        /* #89DDFF */
-  --chart-3: 0 80% 60%;           /* #FF5370 */
-  --chart-4: 232 26% 28%;         /* #34375A */
-  --chart-5: 232 100% 98%;        /* #EEFFFF */
+  --background: 0 0% 95%;         /* #F2F2F2 - Light background */
+  --foreground: 150 100% 15%;     /* #174D38 - Dark green text */
+  --card: 0 0% 95%;               /* #F2F2F2 - Light card background */
+  --card-foreground: 150 100% 15%;/* #174D38 - Dark green text on cards */
+  --primary: 150 100% 15%;        /* #174D38 - Dark green primary */
+  --primary-foreground: 0 0% 95%; /* #F2F2F2 - Light text on primary */
+  --secondary: 0 0% 80%;          /* #CBCBCB - Medium gray secondary */
+  --secondary-foreground: 150 100% 15%; /* #174D38 - Dark green on secondary */
+  --muted: 0 0% 80%;              /* #CBCBCB - Medium gray muted */
+  --muted-foreground: 0 0% 60%;   /* #999999 - Darker gray for muted text */
+  --accent: 0 50% 20%;            /* #4D1717 - Dark red accent */
+  --accent-foreground: 0 0% 95%;  /* #F2F2F2 - Light text on accent */
+  --destructive: 0 50% 20%;       /* #4D1717 - Dark red destructive */
+  --destructive-foreground: 0 0% 95%; /* #F2F2F2 - Light text on destructive */
+  --border: 0 0% 80%;             /* #CBCBCB - Medium gray borders */
+  --input: 0 0% 95%;              /* #F2F2F2 - Light input background */
+  --ring: 150 100% 15%;           /* #174D38 - Dark green focus ring */
+  --chart-1: 150 100% 15%;        /* #174D38 - Dark green chart */
+  --chart-2: 0 50% 20%;           /* #4D1717 - Dark red chart */
+  --chart-3: 0 0% 80%;            /* #CBCBCB - Medium gray chart */
+  --chart-4: 0 0% 60%;            /* #999999 - Darker gray chart */
+  --chart-5: 0 0% 95%;            /* #F2F2F2 - Light chart */
 }
 
 .dark {
-  --background: 232 28% 22%;
-  --foreground: 232 100% 98%;
-  --card: 232 26% 28%;
-  --card-foreground: 232 100% 98%;
-  --primary: 267 70% 72%;
-  --primary-foreground: 232 100% 98%;
-  --secondary: 199 100% 75%;
-  --secondary-foreground: 232 100% 98%;
-  --muted: 232 16% 36%;
-  --muted-foreground: 232 30% 70%;
-  --accent: 267 70% 72%;
-  --accent-foreground: 232 100% 98%;
-  --destructive: 0 80% 60%;
-  --destructive-foreground: 232 100% 98%;
-  --border: 232 16% 36%;
-  --input: 232 16% 36%;
-  --ring: 267 70% 72%;
-  --chart-1: 267 70% 72%;
-  --chart-2: 199 100% 75%;
-  --chart-3: 0 80% 60%;
-  --chart-4: 232 26% 28%;
-  --chart-5: 232 100% 98%;
+  --background: 0 0% 10%;         /* Dark background for dark mode */
+  --foreground: 0 0% 95%;         /* #F2F2F2 - Light text in dark mode */
+  --card: 0 0% 15%;               /* Dark card background */
+  --card-foreground: 0 0% 95%;    /* Light text on dark cards */
+  --primary: 150 100% 15%;        /* #174D38 - Dark green primary */
+  --primary-foreground: 0 0% 95%; /* Light text on primary */
+  --secondary: 0 0% 25%;          /* Darker gray secondary */
+  --secondary-foreground: 0 0% 95%; /* Light text on secondary */
+  --muted: 0 0% 25%;              /* Dark muted background */
+  --muted-foreground: 0 0% 70%;   /* Muted text in dark mode */
+  --accent: 0 50% 20%;            /* #4D1717 - Dark red accent */
+  --accent-foreground: 0 0% 95%;  /* Light text on accent */
+  --destructive: 0 50% 20%;       /* #4D1717 - Dark red destructive */
+  --destructive-foreground: 0 0% 95%; /* Light text on destructive */
+  --border: 0 0% 25%;             /* Dark borders */
+  --input: 0 0% 15%;              /* Dark input background */
+  --ring: 150 100% 15%;           /* #174D38 - Dark green focus ring */
+  --chart-1: 150 100% 15%;        /* #174D38 - Dark green chart */
+  --chart-2: 0 50% 20%;           /* #4D1717 - Dark red chart */
+  --chart-3: 0 0% 80%;            /* #CBCBCB - Medium gray chart */
+  --chart-4: 0 0% 60%;            /* Darker gray chart */
+  --chart-5: 0 0% 95%;            /* #F2F2F2 - Light chart */
 }

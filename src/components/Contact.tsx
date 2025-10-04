@@ -121,15 +121,13 @@ const ContactSection = () => {
   return (
     <footer className="border-t py-16 border-gray-800" id="my-contact">
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center text-white">
-          Get In Touch
-        </h2>
+        <h2 className="text-3xl font-bold mb-8 text-center ">Get In Touch</h2>
 
         <div className="grid md:grid-cols-2 gap-8 items-start">
           {/* Contact Information */}
           <div className="space-y-6">
-            <h3 className="text-xl font-semibold text-white">Let's Connect</h3>
-            <p className="text-gray-300">
+            <h3 className="text-xl font-semibold ">Let's Connect</h3>
+            <p className="">
               I'm currently open to new opportunities and collaborations. Feel
               free to reach out if you'd like to discuss a project or just want
               to say hello!
@@ -138,7 +136,7 @@ const ContactSection = () => {
             <div className="space-y-4">
               <a
                 href="mailto:rafael2002diego@gmail.com"
-                className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
+                className="flex items-center gap-2  hover:text-blue-400 transition-colors"
               >
                 <Mail className="w-5 h-5" />
                 rafael2002diego@gmail.com
@@ -149,7 +147,7 @@ const ContactSection = () => {
                   href="https://github.com/dieg0raf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className=" hover:text-white transition-colors"
                 >
                   <Github className="w-6 h-6" />
                 </a>
@@ -157,7 +155,7 @@ const ContactSection = () => {
                   href="https://www.linkedin.com/in/diego-rafael-8668b02b1/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className=" hover:text-white transition-colors"
                 >
                   <Linkedin className="w-6 h-6" />
                 </a>
@@ -166,7 +164,7 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="bg-card border-gray-700 shadow-lg">
+          <Card className="bg-card  shadow-lg">
             <CardContent className="p-6">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
@@ -176,7 +174,7 @@ const ContactSection = () => {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="bg-card border-gray-700 text-white placeholder:text-muted-foreground"
+                    className="bg-card border-gray-400 placeholder:text-muted-foreground"
                   />
                 </div>
 
@@ -187,7 +185,7 @@ const ContactSection = () => {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="bg-card border-gray-700 text-white placeholder:text-muted-foreground"
+                    className="bg-card border-gray-400 placeholder:text-muted-foreground"
                   />
                 </div>
 
@@ -197,7 +195,7 @@ const ContactSection = () => {
                     required
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="bg-card border-gray-700 text-white placeholder:text-muted-foreground min-h-[150px]"
+                    className="bg-card border-gray-400 placeholder:text-muted-foreground min-h-[150px]"
                   />
                 </div>
 
@@ -213,7 +211,7 @@ const ContactSection = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-16 text-center text-gray-400 text-sm">
+        <div className="mt-16 text-center  text-sm">
           © {new Date().getFullYear()} Diego Rafael. All rights reserved.
         </div>
       </div>
