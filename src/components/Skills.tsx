@@ -156,7 +156,7 @@ const SkillsSection = () => {
             ) : item.Component ? (
               <item.Component className="w-7 h-7 text-accent" />
             ) : null}
-            <span className="text-xs text-white text-center">{item.name}</span>
+            <span className="text-xs text-center">{item.name}</span>
           </div>
         ))}
       </div>
