@@ -14,7 +14,7 @@ const LandingPage = () => {
             </span>
           </span>
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-foreground drop-shadow-lg">
-            Systems Software Engineer
+            Full Stack Software Engineer
           </h1>
         </div>
         {/* Subtitle */}
