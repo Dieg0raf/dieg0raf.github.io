@@ -47,6 +47,18 @@ const LandingPage = () => {
               />
             </span>
           </h1>
+          {/* Title and Degree */}
+          <div className="mt-6">
+            <p className="text-xl md:text-2xl font-medium">
+              <span className="bg-accent/5 px-3 py-1 rounded-md">
+                Full Stack Software Engineer
+              </span>
+              <span className="text-muted-foreground"> · </span>
+              <span className="bg-accent/5 px-3 py-1 rounded-md">
+                CS Graduate
+              </span>
+            </p>
+          </div>
         </div>
 
         {/* Welcome Message */}
@@ -61,7 +73,7 @@ const LandingPage = () => {
         <div className="mb-12 max-w-2xl">
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
             Back in 2020, I began my journey as a computer science student and
-            developer. Over the last 4 years I've built a portfolio of projects,
+            developer. Over the last 5 years I've built a portfolio of projects,
             focusing on full-stack development, systems programming, and
             performance optimization.
           </p>
