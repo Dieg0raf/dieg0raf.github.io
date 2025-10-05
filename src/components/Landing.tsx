@@ -49,15 +49,17 @@ const LandingPage = () => {
           </h1>
           {/* Title and Degree */}
           <div className="mt-6">
-            <p className="text-xl md:text-2xl font-medium">
-              <span className="bg-accent/5 px-3 py-1 rounded-md">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+              <span className="bg-accent/5 px-3 py-1 rounded-md text-xl md:text-2xl font-medium w-fit">
                 Full Stack Software Engineer
               </span>
-              <span className="text-muted-foreground"> · </span>
-              <span className="bg-accent/5 px-3 py-1 rounded-md">
+              <span className="text-muted-foreground text-xl md:text-2xl font-medium hidden sm:inline">
+                ·
+              </span>
+              <span className="bg-accent/5 px-3 py-1 rounded-md text-xl md:text-2xl font-medium w-fit">
                 CS Graduate
               </span>
-            </p>
+            </div>
           </div>
         </div>
 
