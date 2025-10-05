@@ -1,223 +1,184 @@
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Full Stack Developer (Intern & Part-Time)",
+      title: "Full Stack Engineer",
       company: "Trinchero Family Estates",
       icon: "/tfe-logo-2.png",
       location: "Lodi, CA",
-      duration: "June 2024 – Present",
-      description: (
-        <>
-          <div className="mb-8 text-muted-foreground text-base">
-            Served as a{" "}
-            <span className="font-semibold text-accent">
-              Full Stack Developer Intern
-            </span>{" "}
-            (June–August 2024, June–August 2025) and{" "}
-            <span className="font-semibold text-accent">
-              Part-Time Full Stack Developer
-            </span>{" "}
-            (August–December 2024), working on accessibility, backend, and
-            infrastructure projects for Sutter Home and other company sites.
-          </div>
-          <ul className="list-disc list-inside space-y-1 mb-8">
-            <li>
-              Developed AWS Lambda functions for One Stop Wine Shop eCommerce
-              site (<span className="text-yellow-400 font-bold">840k+</span>{" "}
-              yearly views,{" "}
-              <span className="text-yellow-400 font-bold">330k+</span> users),
-              automating data transfers to third-party services including
-              Algolia and Yotpo.
-            </li>
-            <li>
-              Built shopping feed scripts for Facebook/Google Merchant to
-              increase visibility and drive sales for wine-selling sites.
-            </li>
-            <li>
-              Managed Cloudflare DNS for WP Engine sites and integrated Solid
-              Security Pro to fortify website defenses while handling backend
-              integrations.
-            </li>
-            <li>
-              Enhanced accessibility for multiple company sites, including Napa
-              Cellars Wine (
-              <span className="text-yellow-400 font-bold">120k+</span> yearly
-              views, <span className="text-yellow-400 font-bold">71k+</span>{" "}
-              users), implementing semantic HTML, ARIA roles, and keyboard
-              navigation to ensure WCAG compliance.
-            </li>
-            <li>
-              Collaborated with cross-functional teams to deliver accessibility
-              upgrades that improved usability and site performance while
-              reducing bounce rates.
-            </li>
-          </ul>
-          <div className="text-muted-foreground text-sm mt-2">
-            <em>
-              Rehired for multiple terms due to strong performance and impact on
-              key projects.
-            </em>
-          </div>
-        </>
-      ),
-      responsibilities: [],
-      technologies: [
-        "Cloudflare",
-        "GES",
-        "AWS Lambda",
-        "Solid Security Pro",
-        "Algolia",
-        "Yotpo",
-        "PHP",
-        "WordPress",
-        "WP Engine",
-        "Local By FlyWheel",
-        "FileZilla",
+      duration: "Sept 2024 - Present",
+      type: "Full-Time",
+      achievements: [
+        "Built and maintained <span class='text-accent font-semibold'>60+ winery websites</span> (<span class='text-accent font-semibold'>15+ e-commerce</span>), including sites generating <span class='text-accent font-semibold'>$1.8M</span>, <span class='text-accent font-semibold'>$580k</span>, and <span class='text-accent font-semibold'>$165k</span>",
+        "Led hosting/framework migrations and manage AWS infrastructure for high-traffic e-commerce sites (One Stop Wine Shop: <span class='text-accent font-semibold'>330k+ users</span>; Napa Cellars Wine: <span class='text-accent font-semibold'>71k+ users</span>), improving reliability and security",
+        "Developed automation scripts and optimized backend workflows using Python, JavaScript, PHP, streamlining operations and enhancing user engagement",
       ],
+      technologies: [
+        "Python",
+        "JavaScript",
+        "React",
+        "AWS",
+        "Cloudflare",
+        "WordPress",
+        "PHP",
+      ],
+      companyUrl: "https://www.tfewines.com/",
     },
     {
-      title: "Full Stack Developer",
+      title: "Full Stack Engineer Intern",
+      company: "Trinchero Family Estates",
+      icon: "/tfe-logo-2.png",
+      location: "Lodi, CA",
+      duration: "June 2024 - Aug 2024",
+      type: "Internship",
+      achievements: [
+        "Built AWS Lambda functions integrating Commerce7 CMS with Algolia and Yotpo, automating workflows and saving <span class='text-accent font-semibold'>50+ hours</span> of manual work weekly",
+        "Improved Sutter Home website accessibility, raising WCAG compliance from <span class='text-accent font-semibold'>40% to 90%</span>, reducing ADA risk and enhancing inclusivity",
+        "Enhanced front-end and back-end functionality using JavaScript, React, PHP and WordPress, ensuring a stable and seamless user experience",
+      ],
+      technologies: [
+        "AWS",
+        "Algolia",
+        "Yotpo",
+        "WordPress",
+        "Commerce7",
+        "JavaScript",
+        "PHP",
+      ],
+      companyUrl: "https://www.tfewines.com/",
+    },
+    {
+      title: "Full Stack Engineer",
       company: "ASUCD Pantry",
       icon: "/pantry-logo.png",
       location: "Davis, CA",
-      duration: "September 2023 - October 2024",
-      description: (
-        <>
-          Developed and maintained the ASUCD Pantry website, a platform that
-          provides food and resources to UC Davis students in need.
-        </>
-      ),
-      responsibilities: [
-        <>
-          Developed agile strategies to improve system flexibility for{" "}
-          <span className="text-yellow-400 font-bold">1600+</span> users.
-        </>,
-        <>
-          Led development of the ASUCD Pantry website, a platform that provides
-          food and resources to UC Davis students in need.
-        </>,
-        <>
-          Developed a user-friendly interface for students to browse and request
-          items from the pantry.
-        </>,
-        <>
-          Led weekly stand-ups, collaborating with the team to review code and
-          build a positive culture.
-        </>,
+      duration: "Sept 2023 - Oct 2024",
+      type: "Student Organization",
+      achievements: [
+        "Developed and deployed a React/Django-based ordering platform for <span class='text-accent font-semibold'>1,600+ students</span>, streamlining order processing and supporting ASUCD Pantry's mission to address student food insecurity",
+        "Optimized API endpoints using Django views and Axios, and contributed to Nginx deployment, ensuring reliable production release",
       ],
-      technologies: ["React", "Django", "PostgreSQL"],
+      technologies: ["React", "Django", "PostgreSQL", "Axios", "Nginx"],
+      companyUrl: "https://thepantry.ucdavis.edu/",
     },
   ];
 
   return (
-    <section id="my-experience">
-      <h2 className="text-3xl font-bold mb-2 text-center text-foreground">
-        Experience
-      </h2>
-      <div className="mx-auto mb-8 w-20 h-1 bg-accent rounded-full" />
-      <div className="space-y-6">
-        {experiences.map((exp, index) => {
-          const companyUrl =
-            exp.company === "Trinchero Family Estates"
-              ? "https://www.tfewines.com/"
-              : exp.company === "ASUCD Pantry"
-              ? "https://thepantry.ucdavis.edu/"
-              : undefined;
-          const cardContent = (
-            <Card className="bg-card border border-gray-700 shadow-lg group-hover:scale-[1.025] group-hover:shadow-2xl group-focus-within:scale-[1.025] group-focus-within:shadow-2xl group-active:scale-[1.015] group-active:shadow-xl transition-all duration-200 rounded-xl cursor-pointer focus-within:ring-2 focus-within:ring-primary/60">
-              <CardContent className="p-6">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-6">
-                  <div>
-                    <div className="flex items-center gap-3 text-white font-bold text-2xl">
-                      {exp.icon && (
-                        <img
-                          src={exp.icon}
-                          alt={`${exp.company} logo`}
-                          className="w-10 h-10 rounded-full bg-background border border-gray-700 object-cover shrink-0"
-                        />
-                      )}
-                      {exp.company === "Trinchero Family Estates" ? (
+    <section id="my-experience" className="pb-16">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+          Professional Experience
+        </h2>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          Building impactful solutions across diverse industries and
+          technologies
+        </p>
+        <div className="mx-auto mt-6 w-20 h-1 bg-gradient-to-r from-accent to-secondary rounded-full" />
+      </div>
+
+      <div className="space-y-8">
+        {experiences.map((exp, index) => (
+          <Card
+            key={index}
+            className="group bg-gradient-to-br from-card to-card/80 border border-border/50 shadow-lg hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 hover:scale-[1.01] rounded-2xl overflow-hidden"
+          >
+            <CardContent className="p-0">
+              {/* Header Section */}
+              <div className="bg-gradient-to-r from-accent/10 to-secondary/10 p-4 sm:p-6 border-b border-border/30">
+                <div className="flex flex-col gap-4">
+                  {/* Company and Logo Row */}
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <div className="flex-shrink-0">
+                      <img
+                        src={exp.icon}
+                        alt={`${exp.company} logo`}
+                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-background border border-border/50 object-cover"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 mb-1">
+                        <h3 className="text-lg sm:text-xl font-bold text-foreground truncate">
+                          {exp.company}
+                        </h3>
                         <a
-                          href="https://www.tfewines.com/"
+                          href={exp.companyUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:underline focus-visible:underline outline-none"
-                          aria-label="Visit Trinchero Family Estates website"
+                          className="text-accent hover:text-accent/80 transition-colors flex-shrink-0"
+                          aria-label={`Visit ${exp.company} website`}
                         >
-                          <span className="leading-tight">{exp.company}</span>
+                          <ExternalLink size={16} />
                         </a>
-                      ) : exp.company === "ASUCD Pantry" ? (
-                        <a
-                          href="https://thepantry.ucdavis.edu/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:underline focus-visible:underline outline-none"
-                          aria-label="Visit ASUCD Pantry website"
-                        >
-                          <span className="leading-tight">{exp.company}</span>
-                        </a>
-                      ) : (
-                        <span className="leading-tight">{exp.company}</span>
-                      )}
-                    </div>
-                    <h3 className="text-xl font-semibold text-foreground leading-tight mt-1">
-                      {exp.title}
-                    </h3>
-                  </div>
-                  <div className="flex flex-col items-end gap-1 md:min-w-[200px] mt-4 md:mt-0">
-                    <div className="flex items-center gap-1 text-muted-foreground text-sm md:text-base">
-                      <Calendar size={18} className="inline-block mr-1" />
-                      {exp.duration}
-                    </div>
-                    <div className="flex items-center gap-1 text-muted-foreground text-sm md:text-base">
-                      <MapPin size={16} />
-                      {exp.location}
+                      </div>
+                      <h4 className="text-base sm:text-lg font-semibold text-foreground mb-2 break-words">
+                        {exp.title}
+                      </h4>
                     </div>
                   </div>
-                </div>
 
-                <p className="text-muted-foreground mb-4">{exp.description}</p>
-
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground mb-4 ml-4">
-                  {exp.responsibilities.map((resp, idx) => (
-                    <li key={idx}>{resp}</li>
-                  ))}
-                </ul>
-
-                <div className="flex flex-wrap gap-2">
-                  {exp.technologies.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-accent/20 rounded-full text-sm text-white border border-gray-700"
-                    >
-                      {tech}
+                  {/* Metadata Row */}
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                    <span className="bg-accent/20 text-accent px-2 py-1 rounded-md font-medium text-sm w-fit">
+                      {exp.type}
                     </span>
-                  ))}
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-1">
+                        <Calendar size={14} className="flex-shrink-0" />
+                        <span className="truncate">{exp.duration}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <MapPin size={14} className="flex-shrink-0" />
+                        <span className="truncate">{exp.location}</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </CardContent>
-            </Card>
-          );
-          return companyUrl ? (
-            <a
-              key={index}
-              href={companyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block group"
-              tabIndex={0}
-              aria-label={`Visit ${exp.company} website`}
-            >
-              {cardContent}
-            </a>
-          ) : (
-            <div key={index} className="group">
-              {cardContent}
-            </div>
-          );
-        })}
+              </div>
+
+              {/* Key Achievements */}
+              <div className="p-6">
+                <div className="mb-6">
+                  <h5 className="text-sm font-semibold text-foreground mb-3 uppercase tracking-wide">
+                    Key Achievements
+                  </h5>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {exp.achievements.map((achievement, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-start gap-2 p-3 bg-gradient-to-r from-background/30 to-background/10 border border-border/20 rounded-lg"
+                      >
+                        <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                        <span
+                          className="text-sm text-muted-foreground"
+                          dangerouslySetInnerHTML={{ __html: achievement }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Technologies */}
+                <div>
+                  <h5 className="text-sm font-semibold text-foreground mb-3 uppercase tracking-wide">
+                    Technologies Used
+                  </h5>
+                  <div className="flex flex-wrap gap-2">
+                    {exp.technologies.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1.5 bg-gradient-to-r from-accent/10 to-secondary/10 text-foreground border border-border/40 rounded-full text-xs font-medium hover:from-accent/20 hover:to-secondary/20 hover:border-accent/40 transition-colors duration-200"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </section>
   );
