@@ -6,7 +6,7 @@ const ExperienceSection = () => {
     {
       title: "Full Stack Engineer",
       company: "Trinchero Family Estates",
-      icon: "/tfe-logo-2.png",
+      icon: "/tfe-logo-2.webp",
       location: "Lodi, CA",
       duration: "Sept 2024 - Present",
       type: "Full-Time",
@@ -29,7 +29,7 @@ const ExperienceSection = () => {
     {
       title: "Full Stack Engineer Intern",
       company: "Trinchero Family Estates",
-      icon: "/tfe-logo-2.png",
+      icon: "/tfe-logo-2.webp",
       location: "Lodi, CA",
       duration: "June 2024 - Aug 2024",
       type: "Internship",
@@ -52,7 +52,7 @@ const ExperienceSection = () => {
     {
       title: "Full Stack Engineer",
       company: "ASUCD Pantry",
-      icon: "/pantry-logo.png",
+      icon: "/pantry-logo.webp",
       location: "Davis, CA",
       duration: "Sept 2023 - Oct 2024",
       type: "Student Organization",
