@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import ProjectsSection from "../components/ProjectShowCase";
 import ExperienceSection from "../components/Experience";
+import EducationSection from "../components/Education";
 import LandingSection from "../components/Landing";
 import SkillsSection from "../components/Skills";
 import ContactSection from "../components/Contact";
@@ -38,6 +39,7 @@ export default function HomePage() {
       <main className="relative z-10 max-w-5xl mx-auto space-y-16 px-4 pt-20 pb-8 md:py-0">
         <LandingSection />
         <ExperienceSection />
+        <EducationSection />
         <SkillsSection />
         <ProjectsSection />
       </main>
