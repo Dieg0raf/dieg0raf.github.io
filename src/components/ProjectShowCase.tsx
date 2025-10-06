@@ -39,6 +39,74 @@ const ProjectShowcase = () => {
       ],
     },
     {
+      title: "ASN Validator",
+      description:
+        "Built a full-stack ASN validator for Dick's Sporting Goods, implementing complex supply chain business rules with FastAPI backend and intuitive React frontend with real-time validation feedback.",
+      image: "/asn-validator.webp",
+      githubLink: "https://github.com/Dieg0raf/asn-validator",
+      demoWord: "GitHub Repository",
+      techStack: [
+        {
+          name: "FastAPI",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
+        },
+        {
+          name: "React",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+        },
+        {
+          name: "TypeScript",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+        },
+        {
+          name: "Python",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+        },
+        {
+          name: "Pydantic",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+        },
+        {
+          name: "Tailwind CSS",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+        },
+      ],
+    },
+    {
+      title: "ContractorHub",
+      description:
+        "Building a full-stack SaaS application for construction companies to manage job estimates and client relationships, featuring JWT authentication, PDF generation, and mobile-responsive design for field workers.",
+      image: "/painting-saas.png",
+      githubLink: "https://github.com/Dieg0raf/painting-saas",
+      demoWord: "GitHub Repository",
+      techStack: [
+        {
+          name: "Next.js",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+        },
+        {
+          name: "Flask",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg",
+        },
+        {
+          name: "Python",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+        },
+        {
+          name: "Tailwind CSS",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+        },
+        {
+          name: "JWT",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg",
+        },
+        {
+          name: "PostgreSQL",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+        },
+      ],
+    },
+    {
       title: "Distributed File System",
       description:
         "Built a distributed file server with a custom Unix-style file system, supporting robust file operations and crash consistency.",
