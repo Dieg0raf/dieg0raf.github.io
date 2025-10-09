@@ -18,7 +18,7 @@
     --secondary: 180 20% 35%;       /* #2F5755 - Dark teal secondary */
     --secondary-foreground: 0 0% 88%; /* #E0D9D9 - Light text on secondary */
     --muted: 180 20% 35%;           /* #2F5755 - Dark teal muted */
-    --muted-foreground: 0 0% 60%;   /* #999999 - Muted text */
+    --muted-foreground: 0 0% 50%;   /* #999999 - Muted text */
     --accent: 180 30% 40%;          /* #5A9690 - Teal accent */
     --accent-foreground: 0 0% 88%;  /* #E0D9D9 - Light text on accent */
     --destructive: 0 30% 26%;       /* #432323 - Dark red-brown destructive */
