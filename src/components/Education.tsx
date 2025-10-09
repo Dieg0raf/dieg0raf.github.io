@@ -29,7 +29,7 @@ const EducationSection = () => {
       ],
       achievements: [
         "Completed comprehensive computer science curriculum with focus on algorithms, data structures, and software engineering",
-        "Maintained Dean's List status with 3.7 GPA while balancing full-time studies and professional development",
+        "Maintained Dean's List status with 3.5 GPA while balancing full-time studies and professional development",
         "Developed strong foundation in systems programming, database design, and full-stack development",
         "Actively participated in hackathons, applying theoretical knowledge to real-world problems and collaborating with peers",
       ],
