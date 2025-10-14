@@ -4,6 +4,36 @@ import { Card } from "@/components/ui/card";
 const ProjectShowcase = () => {
   const projects = [
     {
+      title: "Gravity Forms Social Action Plugin",
+      description:
+        "Developed a custom WordPress plugin that extends Gravity Forms with social media interaction fields, replacing Woorise functionality and saving the company $1,500/month in subscription costs. The plugin includes 12 different social action types (Facebook, Instagram, LinkedIn, YouTube, TikTok, Twitter, Pinterest), bonus entry tracking for contests, and self-contained Font Awesome integration with no external dependencies.",
+      image: "/action-plugin.webp",
+      githubLink: "https://github.com/Dieg0raf/Custom-Action-Plugin",
+      demoWord: "GitHub Repository",
+      techStack: [
+        {
+          name: "JavaScript",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+        },
+        {
+          name: "PHP",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
+        },
+        {
+          name: "WordPress",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg",
+        },
+        {
+          name: "CSS",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+        },
+        {
+          name: "HTML",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+        },
+      ],
+    },
+    {
       title: "ContractorHub (Currently in Development)",
       description:
         "Building a full-stack SaaS application for construction companies to manage job estimates and client relationships, featuring JWT authentication, PDF generation, and mobile-responsive design for field workers.",
@@ -351,7 +381,7 @@ const ProjectShowcase = () => {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                     </div>
