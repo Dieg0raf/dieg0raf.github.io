@@ -138,7 +138,7 @@ const LandingPage = () => {
               <Mail className="w-5 h-5 group-hover:scale-110 transition-transform duration-150" />
             </a>
             <a
-              href="/Diego_Rafael_Resume_15.pdf"
+              href="/Diego_Resume_New__1.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 border border-border/50 hover:border-accent/50 rounded-lg flex items-center justify-center text-foreground hover:text-accent transition-all duration-150 group"
